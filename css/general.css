@@ -21,10 +21,11 @@ Large:
 
 02 - COLORS
 
-- Primary: 
-- Tints:
-- Shades:
-- Greys:
+- Primary: #004e98
+- Accent: #ff6700
+- Tints: #99B8D6, #ccdcea
+- Shades: #003E7A,
+- Greys: #c0c0c0
 
 03 - IMAGES
 
@@ -66,6 +67,7 @@ body{
     font-family: 'Lato', sans-serif;
     line-height: 1;
     font-weight: 400;
+    color: #c0c0c0;
     position: relative;
 }
 
@@ -78,20 +80,54 @@ header, section, footer {
 }
 
 nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    position: absolute;
+    
     display: grid;
     grid-template-columns: 1fr 2fr ;
     width: 100%;
-    padding: 2rem;
+    background-color: #004da3;
+    
 }
 
 .main-nav-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.2rem;
+}
+
+.main-nav-list li {
+    width: 100%;
+     position: relative;
+}
+
+.main-nav-list li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    transform: (-20deg);
+}
+
+.main-nav-link:link,
+.main-nav-link:visited,
+.main-nav-link:hover,
+.main-nav-link:active{
+    font-weight: 500;
+    font-size: 1.8rem;
+    font-style: oblique;
+    display: inline-block;
+    padding: 1.2rem;
+    background-color: #1a7deb;
+    width: 100%;
+    text-align: center;
+    transition: ease-in 0.2s;
+    color: #ffe680;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active
+{
+    background-color: #4d9af0;
+    
 }
 
 .hidden {
