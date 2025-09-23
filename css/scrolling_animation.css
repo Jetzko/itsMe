@@ -10,10 +10,6 @@ html {
 
 /* We'll want to match these colors for the best melty effect */
 /* But play around with them (and add a color to section) to see happens */
-body,
-.content {
-  background-color: var(--color-background, black);
-}
 
 main {
   view-timeline: --main;
@@ -41,12 +37,14 @@ main {
   --contrast: 4;
   --blur: 0.5rem;
 
-  animation: blink ease-in-out both;
-  animation-timeline: --section;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
+  animation: zoom-scroll 1.5s ease-in-out both;
+  animation-timeline: --section;
+  animation-range: entry 0% exit 200%;
 }
 
 @keyframes blink {
@@ -64,7 +62,7 @@ main {
   }
 }
 
-
+/* 
 .site-header label:last-of-type {
   view-timeline: --section inline;
 }
@@ -73,7 +71,7 @@ main {
   animation: fade-scroll ease-in-out both;
   animation-timeline: --section;
   animation-range: entry-crossing;
-}
+} */
 
 @keyframes fade-scroll {
   0% {
@@ -86,7 +84,7 @@ main {
 }
 
 body .content {
-  animation: zoom-scroll ease-in-out both;
+  animation: zoom-scroll 1.5s ease-in-out both;
   animation-timeline: --section;
 }
 
@@ -114,27 +112,7 @@ body .content {
   }
 }
 
-@keyframes horizontal-scroll {
-  0% {
-    filter: blur(5rem);
-    transform: translate3d(100%, 0%, 0);
-  }
 
-  50% {
-    transform: none;
-    filter: blur(0);
-    opacity: 1;
-    visibility: visible;
-  }
-
-  100% {
-    filter: blur(3rem);
-    transform: translate3d(-100%, 0%, 0);
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-/* 
+/*
 Ho adattato l'animazione realizzata da Giana https://codepen.io/giana/pen/rNRzgRj
 */

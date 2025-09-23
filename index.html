@@ -7,104 +7,150 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/scrolling_animation.css" />
+    <link rel="stylesheet" href="css/background_stars_animation.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+
+    <script defer src="js/script.js"></script>
   </head>
   <body>
-    <nav class="main-nav">
+    <!-- <nav class="main-nav indicator hidden">
       <a href="#" class="logo">💻</a>
       <ul class="main-nav-list">
-        <li><a href="#hero" class="main-nav-link">Home</a></li>
-        <li><a href="#about" class="main-nav-link">Chi sono</a></li>
-        <li><a href="#projects" class="main-nav-link">Progetti</a></li>
-        <li><a href="#skills" class="main-nav-link">Competenze</a></li>
-        <li><a href="#contacts" class="main-nav-link">Contatti</a></li>
+        <li><a href="#hero" class="main-nav-link sr-only">Home</a></li>
+        <li><a href="#about" class="main-nav-link sr-only">Chi sono</a></li>
+        <li>
+          <a href="#projects" class="main-nav-link sr-only">Progetti</a>
+        </li>
+        <li>
+          <a href="#skills" class="main-nav-link sr-only">Competenze</a>
+        </li>
+        <li>
+          <a href="#contacts" class="main-nav-link sr-only">Contatti</a>
+        </li>
       </ul>
-    </nav>
+    </nav> -->
 
-    <div class="mascotte hidden">
-      <p class="face">👽</p>
-      <div class="baloon">
-        <p class="description">Cliccami!</p>
-        <div class="dropdown">
-          <a href="#hero" class="main-nav-link">Benvenuto</a>
-          <a href="#about" class="main-nav-link">Chi sono</a>
-          <a href="#projects" class="main-nav-link">Progetti</a>
-          <a href="#skills" class="main-nav-link">Competenze</a>
-          <a href="#contacts" class="main-nav-link">Contatti</a>
+    <!-- <div class="mascotte hidden">
+        <p class="face">👽</p>
+        <div class="baloon">
+          <p class="description">Cliccami!</p>
+          <div class="dropdown">
+            <a href="#hero" class="main-nav-link">Benvenuto</a>
+            <a href="#about" class="main-nav-link">Chi sono</a>
+            <a href="#projects" class="main-nav-link">Progetti</a>
+            <a href="#skills" class="main-nav-link">Competenze</a>
+            <a href="#contacts" class="main-nav-link">Contatti</a>
+          </div>
+        </div>
+      </div> -->
+
+    <header id="hero" class="section">
+      <div class="content hero">
+        <div class="hero-title">
+          <h1 class="main-title">Il mio nome è <strong>Andrea</strong>.</h1>
+          <h2 class="secondary-title">
+            E sono un <strong>full stack web developer</strong>.
+          </h2>
+        </div>
+        <div class="hero sphere">
+          <nav class="main-nav">
+            <a href="#about" class="main-nav-link about">Chi sono io</a>
+            <a href="#projects" class="main-nav-link projects"
+              >I miei Progetti</a
+            >
+            <a href="#skills" class="main-nav-link skills">Le mie Competenze</a>
+            <!-- <a href="#contacts" class="main-nav-link sr-only"
+              >I miei Contatti</a
+            > -->
+          </nav>
+          <div id="stars"></div>
+          <div id="stars2"></div>
+          <div id="stars3"></div>
         </div>
       </div>
-    </div>
-
-    <header class="hero">
-      <h1 class="main-title">Andrea De Filippi</h1>
-      <h2 class="secondary-title">Web Developer</h2>
     </header>
 
     <main>
-      <section class="about">
-        <h2 class="section-title">Chi Sono</h2>
-        <p class="text">
-          Sono uno sviluppatore web, con la passione per il design, lo sviluppo
-          e la crescita personale.
-        </p>
-        <p class="text">
-          Tra i miei hobby ci sono i videogiochi, la scrittura e il trekking.
-        </p>
-      </section>
-
-      <section class="projects">
-        <h2 class="section-title">I miei Progetti</h2>
-        <div class="container">
-          <a class="project" href="#">
-            <h3 class="project-title">Omnifood</h3>
-            <img src="#" alt="Omnifood" />
-            <p class="project-text">Il mio primo progetto studio</p>
-          </a>
-          <a class="project" href="#">
-            <h3 class="project-title">Forkify</h3>
-            <img src="#" alt="Forkify" class="project-img" />
-            <p class="project-text">Il mio secondo progetto studio</p>
-          </a>
-          <a class="project" href="#">
-            <h3 class="project-title">It's me!</h3>
-            <img src="#" alt="It's me!" class="project-img" />
-            <p class="project-text">Il mio primo progetto autonomo</p>
-          </a>
+      <section id="about" class="section about">
+        <div class="content">
+          <h2 class="section-title">Chi Sono</h2>
+          <p class="text">
+            Sono uno sviluppatore web, con la passione per il design, lo
+            sviluppo e la crescita personale.
+          </p>
+          <p class="text">
+            Sebbene già in anni precedenti mi sia interessato di programmazione,
+            da Febbraio 2024 ho iniziato il mio studio strutturato dello
+            sviluppo web.
+          </p>
+          <p class="text">
+            Tra i miei hobby ci sono i videogiochi, i giochi di ruolo da tavolo,
+            la scrittura e il trekking.
+          </p>
         </div>
       </section>
 
-      <section class="skills">
-        <h2 class="section-title">Le mie Competenze</h2>
-        <ul class="skills-list">
-          <li class="skill">HTML + CSS ✅</li>
-          <li class="skill">Javascript ✅</li>
-          <li class="skill">Git ✅</li>
-          <li class="skill">AI Prompt ⚒️</li>
-          <li class="skill">Node.js ⚒️</li>
-          <li class="skill">Express ⚒️</li>
-          <li class="skill">MongoDB ⚒️</li>
-          <li class="skill">Sass ⚒️</li>
-          <li class="skill">Tailwind ⚒️</li>
-          <li class="skill">React ⚒️</li>
-          <li class="skill">Next.js ⚒️</li>
-          <li class="skill">Redux ⚒️</li>
-        </ul>
+      <section id="projects" class="section projects">
+        <div class="content">
+          <h2 class="section-title">I miei Progetti</h2>
+          <div class="container">
+            <a class="project" href="#">
+              <h3 class="project-title">Omnifood</h3>
+              <img src="#" alt="Omnifood" />
+              <p class="project-text">Il mio primo progetto studio</p>
+            </a>
+            <a class="project" href="#">
+              <h3 class="project-title">Forkify</h3>
+              <img src="#" alt="Forkify" class="project-img" />
+              <p class="project-text">Il mio secondo progetto studio</p>
+            </a>
+            <a class="project" href="#">
+              <h3 class="project-title">It's me!</h3>
+              <img src="#" alt="It's me!" class="project-img" />
+              <p class="project-text">Il mio primo progetto autonomo</p>
+            </a>
+          </div>
+        </div>
       </section>
 
-      <section class="contacts">
-        <h2 class="section-title">Contatti</h2>
-        <h3 class="contact-title">
-          Se desideri lavorare con me, ecco dove puoi raggiungermi:
-        </h3>
-        <p class="contact">andreadefilippi@gmail.com</p>
-        <p class="contact">Linkedin</p>
+      <section id="skills" class="section skills">
+        <div class="content">
+          <h2 class="section-title">Le mie Competenze</h2>
+          <ul class="skills-list">
+            <li class="skill">HTML + CSS ✅</li>
+            <li class="skill">Javascript ✅</li>
+            <li class="skill">Git ✅</li>
+            <li class="skill">AI Prompt ⚒️</li>
+            <li class="skill">Node.js ⚒️</li>
+            <li class="skill">Express ⚒️</li>
+            <li class="skill">MongoDB ⚒️</li>
+            <li class="skill">Sass ⚒️</li>
+            <li class="skill">Tailwind ⚒️</li>
+            <li class="skill">React ⚒️</li>
+            <li class="skill">Next.js ⚒️</li>
+            <li class="skill">Redux ⚒️</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contacts" class="section contacts">
+        <div class="content">
+          <h2 class="section-title">Contatti</h2>
+          <h3 class="contact-title">
+            Se desideri lavorare con me, ecco dove puoi raggiungermi:
+          </h3>
+          <p class="contact">andreadefilippi@gmail.com</p>
+          <p class="contact">Linkedin</p>
+        </div>
       </section>
     </main>
 
-    <footer class="bio">
+    <footer class="section bio">
       <p>Andrea, un web developer junior</p>
     </footer>
   </body>
