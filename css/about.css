@@ -1,0 +1,57 @@
+.about .content {
+    margin: 0.2rem;
+    display: grid;
+    grid-template-areas: 
+    'about-title about-title about-title'
+    '. . .'
+    'about-text1 about-text1 .'
+    '. about-text2 about-text2'
+    'about-text3 about-text3 .'
+    '. . .';
+     background: radial-gradient(ellipse at bottom, #000000 0%, #331900 100%);
+     text-shadow: 0 0 2px #fff2e6;
+     color: #fff2e6;
+}
+
+.background {
+    position: absolute;
+    z-index: 30;
+}
+
+.about .section-title {
+    grid-area: about-title;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 3rem;
+    text-shadow: 0 0 3px #fff2e6;
+}
+
+.about .section-title em {
+    font-style: normal;
+    text-decoration: underline #ff7d00;
+}
+
+.about .section-title strong {
+    color: #ff7d00;
+}
+
+.about .text {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.about .description {
+    grid-area: about-text1;
+}
+
+.about .history {
+    grid-area: about-text2;
+    justify-self: flex-end;
+}
+
+.about .hobby {
+    grid-area: about-text3;
+}

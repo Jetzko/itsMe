@@ -6,7 +6,7 @@
     justify-content: space-around;
     align-content: center;
     text-align: center;
-    text-shadow: 0 0 3px #f4e6ff;
+    text-shadow: 0 0 2px #f4e6ff;
     background: radial-gradient(ellipse at bottom, #000000 0%, #1d0033 100%);
 }
 
@@ -36,7 +36,6 @@
 }
 
 .hero.sphere {
-    background-color: #480080;
     flex: 0 1 auto;
     height: 44rem;
     width: 44rem;
@@ -65,9 +64,11 @@
 }
 
 .main-nav-link { 
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 3.6rem;
     flex: 0 0 44rem;
-    color: #fff;
+    color: #f4e6ff;
+    text-shadow: 0 0 2px #f4e6ff;
     opacity: 0;
   filter: blur(1rem);
   transition: opacity 0.4s, filter 0.4s;

@@ -3,6 +3,11 @@ const mainNav = document.querySelector('.main-nav');
 const sphere = document.querySelector('.sphere');
 
 let current = 0;
+let colors = [
+  'radial-gradient(ellipse at bottom, #000000 0%, #331900 100%);',
+  'radial-gradient(ellipse at bottom, #000000 0%, #002633 100%);',
+  'radial-gradient(ellipse at bottom, #000000 0%, #332c00 100%);',
+];
 
 const showLink = function (index) {
   links.forEach((link, i) => {
@@ -10,6 +15,7 @@ const showLink = function (index) {
     if (i === index) {
       link.scrollIntoView({ behavior: 'instant', block: 'center' });
     }
+    sphere.style.background = colors[i];
   });
 };
 
@@ -24,13 +30,15 @@ sphere.addEventListener('mouseleave', function (e) {
   links.forEach((link) => {
     link.classList.remove('active');
   });
+  sphere.style.background =
+    'radial-gradient(ellipse at bottom, #000000 0%, #1d0033 100%);';
 });
 
 // Wheel event
 sphere.addEventListener('wheel', (e) => {
-  if (e.deltaY > 0) {
+  if (e.deltaY > 40) {
     current = (current + 1) % links.length;
-  } else if (e.deltaY < 0) {
+  } else if (e.deltaY < -40) {
     current = (current - 1 + links.length) % links.length;
   }
   e.preventDefault();

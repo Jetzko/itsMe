@@ -14,7 +14,7 @@
   animation: animStar 50s linear infinite;
 }
 #stars:after {
-  content: " ";
+  content: "";
   position: absolute;
   top: 2000px;
   width: 1px;
@@ -31,7 +31,7 @@
   animation: animStar 100s linear infinite;
 }
 #stars2:after {
-  content: " ";
+  content: "";
   position: absolute;
   top: 2000px;
   width: 2px;
@@ -82,7 +82,7 @@
   animation: animStar 150s linear infinite;
 }
 #stars3:after {
-  content: " ";
+  content: "";
   position: absolute;
   top: 2000px;
   width: 3px;
