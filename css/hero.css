@@ -6,8 +6,8 @@
     justify-content: space-around;
     align-content: center;
     text-align: center;
-    text-shadow: 0 0 2px #f4e6ff;
-    background: radial-gradient(ellipse at bottom, #000000 0%, #1d0033 100%);
+    text-shadow: 0 0 2px var(--light-violet);
+    background: radial-gradient(ellipse at bottom, #000000 0%, var(--dark-violet));
 }
 
 .main-title, .secondary-title {
@@ -22,8 +22,8 @@
 }
 
 .main-title strong {
-    color: #8f00ff;
-    text-shadow: 0 0 3px #8f00ff;
+    color: var(--prime-violet);
+    text-shadow: 0 0 3px var(--prime-violet);
 }
 
 .secondary-title{
@@ -32,7 +32,7 @@
 }
 
 .secondary-title strong{
-    text-decoration: underline #8f00ff;
+    text-decoration: underline var(--prime-violet);
 }
 
 .hero.sphere {
@@ -42,12 +42,12 @@
     border-radius: 50%;
     z-index: 10;
     overflow: hidden;
-    box-shadow: 0 0 10px 1px #8f00ff;
+    box-shadow: 0 0 10px 1px var(--prime-violet);
     transition: box-shadow 0.2s ease-in;
 }
 
 .hero.sphere:hover {
-    box-shadow: 0 0 50px 5px #8f00ff;
+    box-shadow: 0 0 50px 5px var(--prime-violet);
 }
 
 .main-nav {
@@ -67,8 +67,8 @@
     font-family: 'Josefin Sans', sans-serif;
     font-size: 3.6rem;
     flex: 0 0 44rem;
-    color: #f4e6ff;
-    text-shadow: 0 0 2px #f4e6ff;
+    color: var(--light-violet);
+   
     opacity: 0;
   filter: blur(1rem);
   transition: opacity 0.4s, filter 0.4s;
@@ -80,4 +80,5 @@
   opacity: 1;
   filter: blur(0);
   pointer-events: auto;
+   text-shadow: 0 0 3px var(--light-violet);
 }

@@ -1,16 +1,19 @@
+
 .about .content {
     margin: 0.2rem;
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
     'about-title about-title about-title'
-    '. . .'
-    'about-text1 about-text1 .'
-    '. about-text2 about-text2'
-    'about-text3 about-text3 .'
-    '. . .';
-     background: radial-gradient(ellipse at bottom, #000000 0%, #331900 100%);
-     text-shadow: 0 0 2px #fff2e6;
-     color: #fff2e6;
+    'portrait about-text1 about-text1'
+    'portrait about-text2 about-text2'
+    'portrait about-text3 about-text3'
+    'orb orb orb';
+     background: radial-gradient(ellipse at bottom, #000000 0%, var(--dark-orange) 100%);
+
+     color: var(--light-orange);
+     text-shadow: 0 0 3px var(--light-orange);
+     /* grid-template: repeat(5, 1fr) / repeat(4, 1fr); */
+     padding: 1.2rem;
 }
 
 .background {
@@ -24,19 +27,51 @@
     justify-content: center;
     font-weight: 600;
     font-size: 3rem;
-    text-shadow: 0 0 3px #fff2e6;
 }
 
-.about .section-title em {
+.about em {
     font-style: normal;
-    text-decoration: underline #ff7d00;
+    text-decoration: underline var(--prime-orange);
 }
 
-.about .section-title strong {
-    color: #ff7d00;
+.about strong {
+    color: var(--prime-orange);
+    text-shadow: 0 0 3px var(--prime-orange);
 }
 
-.about .text {
+.portrait {
+    grid-area: portrait;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 32rem;
+    height: 32rem;
+    z-index: 100;
+    margin-right: 6.4rem;
+    filter: sepia(30%);
+    opacity: 0.2;
+    flex-wrap: wrap;
+    transition: all 0.2s ease-in ;
+}
+
+.portrait:hover{
+    filter: sepia(30%) blur(0rem);
+    opacity: 0.8;
+    transform: scale(1.2, 1.2);
+    
+}
+
+.portrait img {
+    position: relative;
+    width: 32rem;
+    height: 32rem;
+    border-radius: 50%;
+    z-index: -10;
+}
+
+.about .inner-paragraph {
     display: flex;
     justify-content: flex-start;
     font-size: 2rem;
@@ -45,6 +80,7 @@
 
 .about .description {
     grid-area: about-text1;
+    align-self: flex-end;
 }
 
 .about .history {
@@ -54,4 +90,8 @@
 
 .about .hobby {
     grid-area: about-text3;
+    align-self: flex-start;
 }
+
+
+

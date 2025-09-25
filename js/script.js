@@ -1,13 +1,23 @@
 const links = document.querySelectorAll('.main-nav-link');
 const mainNav = document.querySelector('.main-nav');
 const sphere = document.querySelector('.sphere');
+const orbs = document.querySelectorAll('.orb');
 
 let current = 0;
-let colors = [
-  'radial-gradient(ellipse at bottom, #000000 0%, #331900 100%);',
-  'radial-gradient(ellipse at bottom, #000000 0%, #002633 100%);',
-  'radial-gradient(ellipse at bottom, #000000 0%, #332c00 100%);',
-];
+
+orbs.forEach((orb) => {
+  orb.addEventListener('mouseenter', () => {
+    console.log(orb);
+    console.log(orb.querySelector('.orb-anchor'));
+    orb.querySelector('.orb-anchor').classList.add('active');
+  });
+});
+
+orbs.forEach((orb) => {
+  orb.addEventListener('mouseleave', () => {
+    orb.querySelector('.orb-anchor').classList.remove('active');
+  });
+});
 
 const showLink = function (index) {
   links.forEach((link, i) => {
@@ -15,7 +25,6 @@ const showLink = function (index) {
     if (i === index) {
       link.scrollIntoView({ behavior: 'instant', block: 'center' });
     }
-    sphere.style.background = colors[i];
   });
 };
 

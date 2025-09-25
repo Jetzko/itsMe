@@ -23,10 +23,13 @@ Large:
 
 02 - COLORS
 
-- Primary: #01befe, #ffdd00, #ff7d00, #8f00ff
-- Tints: 
-- Shades: 
-- Greys: #c0c0c0
+- Primary: #8f00ff, #ff7d00, #01befe, #ffdd00, 
+
+- Tints: #f4e6ff, #fff2e6,
+
+- Shades: #1d0033, #331900
+
+- Greys: #c0c0c0, #000000,
 
 03 - IMAGES
 
@@ -46,6 +49,22 @@ Large:
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 
 */
+
+:root{
+--prime-violet: #8f00ff;
+--light-violet: #f4e6ff;
+--dark-violet: #1d0033;
+
+--prime-orange:  #ff7d00;
+--light-orange: #fff2e6;
+--dark-orange: #331900;
+
+--prime-blue: #01befe;
+
+--prime-yellow: #ffdd00;
+
+--prime-green: #adff02;
+}
 
 *{
     padding: 0;
@@ -88,4 +107,42 @@ header, section, footer {
 
 h1, h2, h3 {
     font-family: 'Josefin Sans', sans-serif;
+}
+
+.orb {
+    grid-area: orb;
+    width: 50px;
+    height: 50px;
+    background-color:#1d0033;
+    box-shadow: 0 0 2px 2px var(--prime-violet);
+    justify-self: center;
+    border-radius: 50%;
+    z-index: 30;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--dark-violet);
+}
+
+.orb:hover {
+    box-shadow: 0 0 10px 10px var(--prime-violet);
+}
+
+.orb-anchor {
+    width: 75%;
+    height: 75%;
+    color: var(--dark-violet);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    transition: all 0.2s ease-in;
+}
+
+.orb-anchor.active svg{
+    color: var(--prime-violet);
+    opacity: 0.8;
+    /* box-shadow: 0 0 2px 2px var(--prime-violet); */
 }
