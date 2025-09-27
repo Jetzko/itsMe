@@ -15,41 +15,11 @@
     <link rel="stylesheet" href="css/background_stars_animation.css" />
     <link rel="stylesheet" href="css/hero.css" />
     <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/skills.css" />
 
     <script defer src="js/script.js"></script>
   </head>
   <body>
-    <!-- <nav class="main-nav indicator hidden">
-      <a href="#" class="logo">💻</a>
-      <ul class="main-nav-list">
-        <li><a href="#hero" class="main-nav-link sr-only">Home</a></li>
-        <li><a href="#about" class="main-nav-link sr-only">Chi sono</a></li>
-        <li>
-          <a href="#projects" class="main-nav-link sr-only">Progetti</a>
-        </li>
-        <li>
-          <a href="#skills" class="main-nav-link sr-only">Competenze</a>
-        </li>
-        <li>
-          <a href="#contacts" class="main-nav-link sr-only">Contatti</a>
-        </li>
-      </ul>
-    </nav> -->
-
-    <!-- <div class="mascotte hidden">
-        <p class="face">👽</p>
-        <div class="baloon">
-          <p class="description">Cliccami!</p>
-          <div class="dropdown">
-            <a href="#hero" class="main-nav-link">Benvenuto</a>
-            <a href="#about" class="main-nav-link">Chi sono</a>
-            <a href="#projects" class="main-nav-link">Progetti</a>
-            <a href="#skills" class="main-nav-link">Competenze</a>
-            <a href="#contacts" class="main-nav-link">Contatti</a>
-          </div>
-        </div>
-      </div> -->
-
     <header id="hero" class="section">
       <div class="content hero">
         <div class="hero-title">
@@ -88,7 +58,7 @@
           </h2>
           <div class="portrait">
             <img
-              src="src/A(I)utoRitratto.png"
+              src="src/webp/A(I)utoRitratto.webp"
               alt="Il mio bel faccino"
               title="Hello World!"
             />
@@ -143,6 +113,9 @@
 
       <section id="projects" class="section projects">
         <div class="content">
+          <div id="stars" class="background"></div>
+          <div id="stars2" class="background"></div>
+          <div id="stars3" class="background"></div>
           <h2 class="section-title">I miei Progetti</h2>
           <div class="container">
             <a class="project" href="#">
@@ -161,37 +134,175 @@
               <p class="project-text">Il mio primo progetto autonomo</p>
             </a>
           </div>
+          <div class="orb">
+            <a href="#hero" class="orb-anchor"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="orb-anchor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
       </section>
 
       <section id="skills" class="section skills">
         <div class="content">
-          <h2 class="section-title">Le mie Competenze</h2>
-          <ul class="skills-list">
-            <li class="skill">HTML + CSS ✅</li>
-            <li class="skill">Javascript ✅</li>
-            <li class="skill">Git ✅</li>
-            <li class="skill">AI Prompt ⚒️</li>
-            <li class="skill">Node.js ⚒️</li>
-            <li class="skill">Express ⚒️</li>
-            <li class="skill">MongoDB ⚒️</li>
-            <li class="skill">Sass ⚒️</li>
-            <li class="skill">Tailwind ⚒️</li>
-            <li class="skill">React ⚒️</li>
-            <li class="skill">Next.js ⚒️</li>
-            <li class="skill">Redux ⚒️</li>
+          <div id="stars" class="background"></div>
+          <div id="stars2" class="background"></div>
+          <div id="stars3" class="background"></div>
+          <h2 class="section-title">
+            <em>Le</em> mie <strong>Competenze</strong>
+          </h2>
+          <div class="curriculum">
+            <!-- <span>Il mio curriculum</span> -->
+            <a
+              href="./src/Curriculum 08-24.pdf"
+              download="Curriculum_AndreaDeFilippi"
+              class="btn-curriculum"
+            >
+              <span>Curriculum&nbsp;</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon-curriculum"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+                />
+              </svg>
+            </a>
+          </div>
+          <ul class="skill-list">
+            <div class="first-row">
+              <li class="skill">
+                <img src="./src/webp/html-logo.webp " alt="HTML" />
+                <span>HTML ✅</span>
+              </li>
+              <li class="skill">
+                <img src="./src/webp/css-logo.webp" alt="CSS" />
+                <span>CSS ✅</span>
+              </li>
+              <li class="skill">
+                <img src="./src/webp/javascript-logo.webp" alt="javascript" />
+                <span>Javascript ✅</span>
+              </li>
+            </div>
+            <div class="second-row">
+              <li class="skill">
+                <img src="./src/webp/git-logo.webp" alt="git" />
+                <span>Git ⚒️</span>
+              </li>
+              <li class="skill">
+                <img src="./src/webp/Copilot-Logo.webp" alt="AI" />
+                <span>AI ⚒️</span>
+              </li>
+              <li class="skill">
+                <img src="./src/webp/figma-logo.webp" alt="Figma" />
+                <span>Figma ⚒️</span>
+              </li>
+              <li class="skill">
+                <img src="./src/webp/sass-logo.webp" alt="Sass" />
+                <span>Sass 📈 </span>
+              </li>
+            </div>
+            <div class="third-row">
+              <li class="skill">
+                <img src="./src/webp/node-logo.webp" alt="Node.js" />
+                <span>Node.js 🔒</span>
+              </li>
+              <li class="skill">
+                <img src="./src/webp/express-logo.webp" alt="Express" />
+                <span>Express 🔒</span>
+              </li>
+              <li class="skill">
+                <img src="./src/webp/mongo-db.webp" alt="MongoDB" />
+                <span>MongoDB 🔒</span>
+              </li>
+              <li class="skill">
+                <img src="./src/webp/tailwind-logo.webp" alt="Tailwind" />
+                <span>Tailwind 🔒</span>
+              </li>
+            </div>
+            <div class="fourth-row">
+              <li class="skill">
+                <img src="./src/webp/react-logo.webp" alt="React" />
+                <span>React 🔒</span>
+              </li>
+              <li class="skill">
+                <img src="./src/webp/next-logo.webp" alt="Next.js" />
+                <span>Next.js 🔒</span>
+              </li>
+              <li class="skill">
+                <img src="./src/webp/redux-logo.webp" alt="Redux" />
+                <span>Redux 🔒</span>
+              </li>
+            </div>
           </ul>
+          <div class="orb">
+            <a href="#hero" class="orb-anchor"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="orb-anchor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
       </section>
 
       <section id="contacts" class="section contacts">
         <div class="content">
+          <div id="stars" class="background"></div>
+          <div id="stars2" class="background"></div>
+          <div id="stars3" class="background"></div>
           <h2 class="section-title">Contatti</h2>
           <h3 class="contact-title">
             Se desideri lavorare con me, ecco dove puoi raggiungermi:
           </h3>
           <p class="contact">andreadefilippi@gmail.com</p>
           <p class="contact">Linkedin</p>
+        </div>
+        <div class="orb">
+          <a href="#hero" class="orb-anchor"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="orb-anchor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"
+              />
+            </svg>
+          </a>
         </div>
       </section>
     </main>

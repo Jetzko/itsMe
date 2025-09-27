@@ -1,0 +1,129 @@
+.skills .content{
+    background: radial-gradient(ellipse at bottom, #000000 0%, var(--dark-blue) 100%);
+    padding: 1.2rem;
+    display: grid;
+    grid-template: repeat(7, 1fr) / repeat(6, 1fr);
+    color: var(--light-blue);
+    justify-content: stretch;
+}
+
+.skills .section-title {
+    grid-column: 2/6;
+    grid-row: 1/ 2;
+    justify-self: center;
+    z-index: 30;
+    margin-bottom: 2.4rem;
+}
+
+.skills .section-title strong {
+    color: var(--prime-blue);
+}
+
+.skills .section-title em {
+    text-decoration: underline var(--prime-blue);
+    font-style: normal;
+}
+
+.skill-list {
+    display: grid;
+    grid-column: 2/6;
+    grid-row: 2/6;
+    align-self: stretch;
+    row-gap: 1.2rem;
+    /* justify-content: center;
+    align-items: center; */
+    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+    margin-bottom: 1.6rem;
+}
+
+.skill {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+    z-index: 30;
+    border: solid 2px var(--light-blue);
+}
+
+.skill img {
+    width: 4rem;
+    height: 4rem;
+    align-self: center;
+}
+
+.skill span {
+    display: inline-block;
+    text-align: center;
+    font-size: var(--span);
+}
+
+.skills .orb {
+    grid-row: -2 / -1;
+    grid-column: 3/ 5;
+}
+
+.skills .first-row {
+    grid-row: 1 / 2;
+    grid-column: 1/5;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.skills .second-row {
+    grid-row: 2/3;
+    grid-column: span 4;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.skills .third-row {
+    grid-row: 3/4;
+    grid-column: span 4;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.skills .fourth-row {
+    grid-row: 4/5;
+    grid-column: span 4;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.curriculum {
+    grid-row: 6/7;
+    grid-column: 3/5;
+    z-index: 40;
+}
+
+.curriculum span {
+    font-size: var(--span);
+    display: inline-block;
+}
+
+.btn-curriculum {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    padding: 0.4rem;
+    width: 12rem;
+    color: var(--light-blue);
+    cursor: pointer;
+    background-color: var(--shadow-blue);
+    border: none;
+    box-shadow: none;
+    text-align: center;
+}
+
+.btn-curriculum:hover {
+    background-color: var(--shadow-blue2);
+}
+
+.icon-curriculum {
+    width: 2rem;
+}

@@ -1,6 +1,5 @@
 
 .about .content {
-    margin: 0.2rem;
     display: grid;
     grid-template-areas:
     'about-title about-title about-title'
@@ -16,17 +15,12 @@
      padding: 1.2rem;
 }
 
-.background {
-    position: absolute;
-    z-index: 30;
-}
-
 .about .section-title {
     grid-area: about-title;
     display: flex;
     justify-content: center;
     font-weight: 600;
-    font-size: 3rem;
+    font-size: var(--title);
 }
 
 .about em {
