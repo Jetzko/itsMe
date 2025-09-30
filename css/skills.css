@@ -1,9 +1,11 @@
+
 .skills .content{
     background: radial-gradient(ellipse at bottom, #000000 0%, var(--dark-blue) 100%);
     padding: 1.2rem;
     display: grid;
     grid-template: repeat(7, 1fr) / repeat(6, 1fr);
     color: var(--light-blue);
+    text-shadow: 0 0 2px var(--light-blue);
     justify-content: stretch;
 }
 
@@ -17,6 +19,7 @@
 
 .skills .section-title strong {
     color: var(--prime-blue);
+    text-shadow: 0 0 2px var(--prime-blue);
 }
 
 .skills .section-title em {
@@ -29,17 +32,19 @@
     grid-column: 2/6;
     grid-row: 2/6;
     align-self: stretch;
-    row-gap: 1.2rem;
-    /* justify-content: center;
-    align-items: center; */
-    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
-    margin-bottom: 1.6rem;
+    justify-self: stretch;
+    align-content: center;
+    grid-template: repeat(3, 1fr) / repeat(6, 1fr);
+    gap: 1.8rem;
+    position: relative;
 }
 
 .skill {
+    margin: 2rem;
     width: 8rem;
     height: 8rem;
     border-radius: 10%;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,18 +52,62 @@
     align-self: center;
     z-index: 30;
     border: solid 2px var(--light-blue);
+    transition: all 0.2s ease-in;
+    
+    position: relative;
+}
+
+.skill:hover {
+    margin: 0;
+    width: 12rem;
+    height: 12rem;
+    background-color: var(--shadow-blue2);
+}
+
+.skill-list .last {
+    grid-column: 3/4;
 }
 
 .skill img {
     width: 4rem;
     height: 4rem;
     align-self: center;
+    transition: all 0.2s ease-in;
 }
 
 .skill span {
     display: inline-block;
     text-align: center;
     font-size: var(--span);
+    transition: all 0.2s ease-in;
+}
+
+.skill-level {
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 100%;
+    transition: all 0.2s ease-in;
+}
+
+.skill.active img,
+.skill.active span{
+    filter: grayscale(1) blur(12px);
+}
+
+.skill-level svg {
+    width: 3rem;
+    height: 3rem;
+    /* drop-shadow: 0 0 3px 3px var(--light-blue); */
+    filter: drop-shadow(0 0 1px var(--light-blue));
+}
+
+.skill.active .skill-level{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    filter: grayscale(0) blur(0);
 }
 
 .skills .orb {
@@ -66,38 +115,11 @@
     grid-column: 3/ 5;
 }
 
-.skills .first-row {
-    grid-row: 1 / 2;
-    grid-column: 1/5;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.skills .second-row {
-    grid-row: 2/3;
-    grid-column: span 4;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.skills .third-row {
-    grid-row: 3/4;
-    grid-column: span 4;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.skills .fourth-row {
-    grid-row: 4/5;
-    grid-column: span 4;
-    display: flex;
-    justify-content: space-evenly;
-}
-
 .curriculum {
     grid-row: 6/7;
     grid-column: 3/5;
     z-index: 40;
+    margin-top: 2.4rem;
 }
 
 .curriculum span {
@@ -105,22 +127,30 @@
     display: inline-block;
 }
 
-.btn-curriculum {
+.curriculum svg {
+    filter: drop-shadow(0 0 1px var(--light-blue));
+}
+
+.btn-curriculum:link,
+.btn-curriculum:visited {
     display: flex;
     align-items: center;
     justify-content: center;
     justify-self: center;
     padding: 0.4rem;
     width: 12rem;
+    height: 4rem;;
     color: var(--light-blue);
     cursor: pointer;
     background-color: var(--shadow-blue);
     border: none;
     box-shadow: none;
     text-align: center;
+    transition: all 0.2s ease-in;
 }
 
-.btn-curriculum:hover {
+.btn-curriculum:hover,
+.btn-curriculum:active {
     background-color: var(--shadow-blue2);
 }
 

@@ -87,6 +87,11 @@ Small:
 --subtitle: 3rem;
 --paragraph: 2rem;
 --span: 1.6rem;
+
+--default: 400;
+--medium: 500; 
+--semibold: 600;
+--bold: 700;
 }
 
 *{
@@ -132,18 +137,22 @@ h1, h2, h3 {
 
 h1 {
     font-size: var(--main-title);
+    font-weight: var(--bold);
 }
 
 h2 {
     font-size: var(--title);
+    font-weight: var(--semibold);
 }
 
 h3 {
     font-size: var(--subtitle);
+    font-weight: var(--medium);
 }
 
-p {
+p, span {
     font-size: var(--paragraph);
+    font-weight: var(--default);
 }
 
 .orb {

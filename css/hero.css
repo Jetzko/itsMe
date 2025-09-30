@@ -1,3 +1,4 @@
+
 .hero {
     display: flex;
     width: 100%;
@@ -70,9 +71,9 @@
     color: var(--light-violet);
    
     opacity: 0;
-  filter: blur(1rem);
-  transition: opacity 0.4s, filter 0.4s;
-  pointer-events: none;
+    filter: blur(1rem);
+    transition: opacity 0.4s, filter 0.4s;
+    pointer-events: none;
   
 }
 

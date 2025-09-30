@@ -1,0 +1,68 @@
+
+.projects .content {
+    background: radial-gradient(ellipse at bottom, #000000 0%, var(--dark-green) 100%);
+    color: var(--light-green);
+    text-shadow: 0 0 3px var(--light-green);
+    padding: 1.2rem;
+    display: grid;
+    grid-template: 1fr 8fr 1fr / repeat(4, 1fr);
+    row-gap: 1.2rem;
+}
+
+.projects .section-title{
+    grid-row: 1/2;
+    grid-column: 2/4;
+    justify-self: center;
+}
+
+.projects .section-title strong{
+    color: var(--prime-green);
+    text-shadow: 0 0 3px var(--prime-green);
+
+}
+
+.projects .section-title em {
+    font-style: normal;
+    text-decoration: underline var(--prime-green);;
+}
+
+.projects .project-container {
+    grid-row: 2/3;
+    grid-column: 1/5;
+    justify-items: center;
+    align-items: stretch;
+    display: grid;
+    grid-template: 1fr /  fit-content(25%) fit-content(25%) fit-content(25%) fit-content(25%);
+    height: 100%;
+    
+    column-gap: 0.8rem;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    background: var(--dark-green);
+    flex: 0 1 22rem;
+}
+
+.project-title {
+    color: var(--prime-green);
+}
+
+.project-container img {
+    height: 70%;
+}
+
+.project p {
+    text-align: center;
+    flex: 1 1 10%;
+}
+
+.projects .orb {
+    grid-row: 3/4;
+    grid-column: 2/4;
+    margin-top: 1.2rem;
+}
