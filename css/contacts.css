@@ -1,0 +1,104 @@
+
+.contacts .content {
+    background: radial-gradient(ellipse at bottom, #000000 0%, var(--dark-yellow) 100%);
+    color: var(--light-yellow);
+    text-shadow: 0 0 3px var(--light-yellow);
+    padding: 1.2rem;
+    z-index: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contacts .section-title strong{
+    color: var(--prime-yellow);
+    text-shadow: 0 0 3px var(--prime-yellow);
+}
+
+.contact-title em {
+    font-style: normal;
+    text-decoration: underline var(--prime-yellow);
+}
+
+.social {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 200;
+}
+
+.contact {
+    position: relative;
+    cursor: pointer;
+    width: 16rem;
+    background-color: var(--dark-yellow);
+    padding: 1.2rem;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    transition: all 0.3s ease;
+}
+
+.contact::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 10%;
+  background : var(--light-yellow);
+  left: 0;
+  top: 0;
+  
+  opacity: 0.2;
+  z-index: 100;
+  
+}
+
+.contact span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    text-decoration: none;
+    color: var(--prime-yellow);
+    text-shadow: 0 0 3px var(--prime-yellow);
+
+    visibility: hidden;
+
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.contact:hover > span,
+.contact:focus > span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    
+    transform: translate(-50%, -50%) scale(1);   
+    visibility: visible;
+    opacity: 1;
+    transition: all .3s ease;
+}
+
+.contact svg {
+    visibility: visible;
+    height: 8rem;
+    width: 8rem;
+    transform: scale(1);
+    opacity: 1;
+    transition: all .3s ease;
+}
+
+.contact:hover svg,
+.contact:focus svg {
+    transform: scale(0);
+    opacity: 0;
+    transition: all .3s ease;
+    visibility: hidden;
+}
