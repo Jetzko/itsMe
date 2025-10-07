@@ -6,7 +6,7 @@
     grid-template: repeat(7, 1fr) / repeat(6, 1fr);
     color: var(--light-blue);
     text-shadow: 0 0 2px var(--light-blue);
-    justify-content: stretch;
+    justify-content: center;
 }
 
 .skills .section-title {
@@ -29,10 +29,10 @@
 
 .skill-list {
     display: grid;
-    grid-column: 2/6;
+    grid-column: 1/7;
     grid-row: 2/6;
-    align-self: stretch;
-    justify-self: stretch;
+    align-self: center;
+    justify-self: center;
     align-content: center;
     grid-template: repeat(3, 1fr) / repeat(6, 1fr);
     gap: 1.8rem;
@@ -99,7 +99,6 @@
 .skill-level svg {
     width: 3rem;
     height: 3rem;
-    /* drop-shadow: 0 0 3px 3px var(--light-blue); */
     filter: drop-shadow(0 0 1px var(--light-blue));
 }
 

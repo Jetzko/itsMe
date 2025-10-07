@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Andrea De Filippi</title>
+    <title>L'Antro di Andrea</title>
+    <link rel="icon" type="image/x-icon" href="src/svg/crystal_13858718.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,6 +22,7 @@
 
     <script defer src="js/index.js"></script>
     <script defer src="js/skills.js"></script>
+    <script defer src="js/projects.js"></script>
   </head>
   <body>
     <header id="hero" class="section">
@@ -61,7 +63,7 @@
             <img
               src="src/webp/A(I)utoRitratto.webp"
               alt="Il mio bel faccino"
-              title="Mi assomiglia"
+              title="Mi assomiglia un po'"
             />
           </div>
           <div class="inner-paragraph description">
@@ -119,24 +121,245 @@
           <div id="stars3" class="background"></div>
           <h2 class="section-title">I miei <strong>Progetti</strong></h2>
           <div class="project-container">
-            <div class="project">
-              <h3 class="project-title">It's me!</h3>
-              <img src="#" alt="It's me!" class="project-img" />
-              <p class="project-text">Il mio primo progetto indipendente</p>
+            <div class="project left">
+              <div class="project-front">
+                <h3 class="project-title">It's me!</h3>
+                <div class="color-layer">
+                  <img
+                    src="src/webp/myPage.webp"
+                    alt="It's me!"
+                    class="project-img"
+                    id="myPage"
+                  />
+                </div>
+                <span class="project-text">Il mio primo progetto indie</span>
+              </div>
+              <div class="project-back">
+                <button class="close-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="close"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18 18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+                <div class="project-back-card">
+                  <p class="project-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Autem ducimus voluptatibus animi atque? Quaerat sit
+                    blanditiis quisquam doloremque, repellendus molestiae
+                    consequuntur vitae, animi nostrum ex laborum velit ipsum
+                    nulla eos?
+                  </p>
+                </div>
+                <div class="project-back-card-links">
+                  <a class="project-link" href="#"
+                    ><span>Live App</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                      />
+                    </svg>
+                  </a>
+                  <a class="project-link" href="https://github.com/Jetzko/itsMe"
+                    ><span>Git Code</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
-            <div class="project">
-              <h3 class="project-title">Forkify</h3>
-              <img src="#" alt="Forkify" class="project-img" />
-              <p class="project-text">
-                Il mio secondo progetto studio Javascript
-              </p>
+            <div class="project mid">
+              <div class="project-front">
+                <h3 class="project-title">Forkify</h3>
+                <div class="color-layer">
+                  <img
+                    src="src/webp/forkify.webp"
+                    alt="Forkify"
+                    class="project-img"
+                    id="forkify"
+                  />
+                </div>
+                <span class="project-text">Progetto-studio Javascript</span>
+              </div>
+              <div class="project-back">
+                <button class="close-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="close"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18 18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+                <div class="project-back-card">
+                  <p class="project-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Autem ducimus voluptatibus animi atque? Quaerat sit
+                    blanditiis quisquam doloremque, repellendus molestiae
+                    consequuntur vitae, animi nostrum ex laborum velit ipsum
+                    nulla eos?
+                  </p>
+                </div>
+                <div class="project-back-card-links">
+                  <a
+                    class="project-link"
+                    href="https://djetzko-forkify.netlify.app/"
+                    ><span>Live App</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="project-link"
+                    href="https://github.com/Jetzko/forkify"
+                    ><span>Git Code</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
-            <div class="project">
-              <h3 class="project-title">Omnifood</h3>
-              <img src="#" alt="Omnifood" />
-              <p class="project-text">Il mio primo progetto studio HTML+CSS</p>
+            <div class="project right">
+              <div class="project-front">
+                <h3 class="project-title">Omnifood</h3>
+                <div class="color-layer">
+                  <img
+                    src="src/webp/omnifood.webp"
+                    alt="Omnifood"
+                    class="project-img"
+                    id="omnifood"
+                  />
+                </div>
+                <span class="project-text">Progetto-studio HTML+CSS</span>
+              </div>
+              <div class="project-back">
+                <button class="close-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="close"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18 18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+                <div class="project-back-card">
+                  <p class="project-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Autem ducimus voluptatibus animi atque? Quaerat sit
+                    blanditiis quisquam doloremque, repellendus molestiae
+                    consequuntur vitae, animi nostrum ex laborum velit ipsum
+                    nulla eos?
+                  </p>
+                </div>
+                <div class="project-back-card-links">
+                  <a
+                    class="project-link"
+                    href="https://omnifood-djetzko.netlify.app/"
+                    ><span>Live App</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="project-link"
+                    href="https://github.com/Jetzko/omnifood"
+                    ><span>Git Code</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="project-link-icon"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
-            <div class="project"></div>
           </div>
           <div class="orb">
             <a href="#hero" class="orb-anchor"
@@ -529,42 +752,39 @@
           </div>
         </div>
       </section>
-
-      <section id="contacts" class="section contacts">
-        <div class="content">
-          <div id="stars" class="background"></div>
-          <div id="stars2" class="background"></div>
-          <div id="stars3" class="background"></div>
-          <h2 class="section-title">I miei Contatti</h2>
-          <h3 class="contact-title">
-            Se desideri lavorare con me, ecco dove puoi raggiungermi:
-          </h3>
-          <p class="contact">andreadefilippi@gmail.com</p>
-          <p class="contact">Linkedin</p>
-        </div>
-        <div class="orb">
-          <a href="#hero" class="orb-anchor"
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="orb-anchor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"
-              />
-            </svg>
-          </a>
-        </div>
-      </section>
     </main>
 
-    <footer class="section bio">
-      <p>Andrea, un web developer junior</p>
+    <footer id="contacts" class="section contacts">
+      <div class="content">
+        <div id="stars" class="background"></div>
+        <div id="stars2" class="background"></div>
+        <div id="stars3" class="background"></div>
+        <h2 class="section-title">I miei Contatti</h2>
+        <h3 class="contact-title">
+          Se desideri lavorare con me, ecco dove puoi raggiungermi:
+        </h3>
+        <p class="contact">andreadefilippi@gmail.com</p>
+        <p class="contact">Linkedin</p>
+      </div>
+      <div class="orb">
+        <a href="#hero" class="orb-anchor"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="orb-anchor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"
+            />
+          </svg>
+        </a>
+        <p>Andrea, un web developer junior</p>
+      </div>
     </footer>
   </body>
 </html>

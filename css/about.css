@@ -43,7 +43,7 @@
     height: 32rem;
     z-index: 100;
     margin-right: 6.4rem;
-    filter: sepia(30%);
+    filter: sepia(30%) blur(0.2rem);
     opacity: 0.2;
     flex-wrap: wrap;
     transition: all 0.2s ease-in ;
@@ -61,7 +61,6 @@
     width: 32rem;
     height: 32rem;
     border-radius: 50%;
-    z-index: -10;
 }
 
 .about .inner-paragraph {

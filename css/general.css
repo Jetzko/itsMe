@@ -145,7 +145,7 @@ h2 {
     font-weight: var(--semibold);
 }
 
-h3 {
+h3, a {
     font-size: var(--subtitle);
     font-weight: var(--medium);
 }
