@@ -33,14 +33,14 @@
     position: relative;
     cursor: pointer;
     width: 16rem;
-    background-color: var(--dark-yellow);
     padding: 1.2rem;
-    border-radius: 10%;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 200;
     transition: all 0.3s ease;
+    border: solid 2px var(--prime-yellow);
 }
 
 .contact::after {
@@ -48,7 +48,7 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  border-radius: 10%;
+  border-radius: 10px;
   background : var(--light-yellow);
   left: 0;
   top: 0;
@@ -58,7 +58,7 @@
   
 }
 
-.contact span {
+.contact .cta {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -66,24 +66,49 @@
     text-decoration: none;
     color: var(--prime-yellow);
     text-shadow: 0 0 3px var(--prime-yellow);
+    display: inline-block;
+    text-align: center;
 
     visibility: hidden;
 
     opacity: 0;
-    transition: all .3s ease;
+    transition: all .3s linear;
 }
 
-.contact:hover > span,
-.contact:focus > span {
+.contact .cta.active,
+.email.active svg {
+    filter: blur(13px);
+}
+
+.contact:hover .cta,
+.contact:focus .cta {
+    transform: translate(-50%, -50%) scale(1);   
+    visibility: visible;
+    opacity: 1;
+}
+
+.contact .saved {
     position: absolute;
     top: 50%;
     left: 50%;
     display: inline-block;
-    
+    transform: translate(-50%, -50%) scale(0);
+    text-decoration: none;
+    color: var(--prime-yellow);
+    text-shadow: 0 0 3px var(--prime-yellow);
+    text-align: center;
+
+    visibility: hidden;
+
+    opacity: 0;
+    transition: all .2s linear;
+}
+
+.contact .saved.active {
     transform: translate(-50%, -50%) scale(1);   
     visibility: visible;
     opacity: 1;
-    transition: all .3s ease;
+    filter: grayscale(0) blur(0);
 }
 
 .contact svg {
@@ -101,4 +126,34 @@
     opacity: 0;
     transition: all .3s ease;
     visibility: hidden;
+}
+
+.labels {
+    align-self: center;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around; 
+    margin-bottom: 1.2rem;
+    flex: 0 0 auto;
+}
+
+.labels span {
+    display: inline-block;
+    margin: 0 0.4rem;
+    color: var(--prime-yellow);
+    background-color: var(--dark-yellow);
+    border: solid 2px var(--prime-yellow);
+    padding: 1.2rem;
+    border-radius: 15px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.labels span.animate {
+  animation: labelPop 0.5s;
+}
+
+@keyframes labelPop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(0.7); }
+  100% { transform: scale(1); }
 }

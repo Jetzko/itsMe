@@ -27,6 +27,6 @@ projectFrontCards.forEach((card) => {
 closeButtons.forEach((button) => {
   button.addEventListener('click', () => {
     button.closest('.project').classList.remove('active');
-    setTimeout(showCards, '400');
+    setTimeout(showCards, '500');
   });
 });

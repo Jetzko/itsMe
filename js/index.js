@@ -7,8 +7,6 @@ let current = 0;
 
 orbs.forEach((orb) => {
   orb.addEventListener('mouseenter', () => {
-    console.log(orb);
-    console.log(orb.querySelector('.orb-anchor'));
     orb.querySelector('.orb-anchor').classList.add('active');
   });
 });

@@ -34,7 +34,7 @@
     align-self: center;
     justify-self: center;
     align-content: center;
-    grid-template: repeat(3, 1fr) / repeat(6, 1fr);
+    grid-template: repeat(3, 1fr) / repeat(5, 1fr);
     gap: 1.8rem;
     position: relative;
 }
@@ -64,8 +64,31 @@
     background-color: var(--shadow-blue2);
 }
 
-.skill-list .last {
-    grid-column: 3/4;
+.skill.first-row:nth-child(1){
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.skill.first-row:nth-child(2){
+    grid-row: 1;
+    grid-column: 3;
+}
+
+.skill.first-row:nth-child(3){
+    grid-row: 1;
+    grid-column: 4;
+}
+
+.skill.first-row:first {
+    grid-column: 2;
+}
+
+.skill-list .second-row {
+    grid-row: 2;
+}
+
+.skill.third-row {
+    grid-row: 3;
 }
 
 .skill img {
@@ -85,9 +108,10 @@
 .skill-level {
     visibility: hidden;
     position: absolute;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, 0);
-    top: 100%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
     transition: all 0.2s ease-in;
 }
 
@@ -104,18 +128,13 @@
 
 .skill.active .skill-level{
     visibility: visible;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
     filter: grayscale(0) blur(0);
 }
 
-.skills .orb {
-    grid-row: -2 / -1;
-    grid-column: 3/ 5;
-}
-
 .curriculum {
-    grid-row: 6/7;
+    grid-row: 6/8;
     grid-column: 3/5;
     z-index: 40;
     margin-top: 2.4rem;
