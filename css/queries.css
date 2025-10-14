@@ -1,0 +1,236 @@
+/* Below 1344PX (larger desktops) */
+/********************************************/
+@media(min-width:84em){
+    html {
+        scroll-behavior: smooth;
+        font-size: 62.5%;
+    }
+    
+/*HERO*/
+.hero{
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    justify-items: center;
+    /* padding: 2.4rem; */
+}
+
+.hero-title {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-title, .secondary-title{
+    margin-top: 2.4rem;
+}
+
+.sphere-cta-large {
+    display: block;
+    margin-top: 4.8rem;
+}
+
+.hero.sphere  {
+    /* flex: 0 1 auto; */
+    transform: scale(1.2);
+    display: flex;
+    justify-content: center;
+}
+
+.sphere-cta-small {
+    display: none;
+}
+
+
+/*ABOUT*/
+/*PROJECTS*/
+/*SKILLS*/
+/*CONTACTS*/
+}
+
+/* Below 1200PX (Landscape Tablets) */
+/********************************************/
+@media(max-width: 75em){
+ 
+/*HERO*/
+/*ABOUT*/
+/*PROJECTS*/
+/*SKILLS*/
+/*CONTACTS*/
+}
+
+/* Below 944px (Tablets) */
+/********************************************/
+@media (max-width: 59em){
+      html{
+        font-size: 50%;
+    }
+/*HERO*/
+/*ABOUT*/
+
+.about .content {
+     grid-template-areas:
+    'about-title about-title about-title'
+    'portrait portrait portrait'
+    'about-text1 about-text1 about-text1'
+    'about-text2 about-text2 about-text2'
+    'about-text3 about-text3 about-text3';
+    justify-items: center;
+}
+
+.portrait {
+    margin-right: 0;
+}
+
+/*PROJECTS*/
+
+.projects .content {
+    grid-template-rows: 0.8fr 4fr
+}
+
+.project-container {
+    grid-row: 2/3;
+    grid-template: repeat(3, 25%) / 1fr;
+    justify-self: center;
+    height: 100%;
+    width: 80%;
+    row-gap: 1.2rem;
+    margin: 1.2rem;
+}
+
+.project-front {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 2fr;
+    justify-items: center;
+    row-gap: 0.2rem;
+   
+}
+
+.project-title {
+    margin: 1.6rem;
+    
+}
+
+.project-text {
+    margin: 1.6rem;
+}
+
+.color-layer {
+    height: 100%;
+    overflow: hidden;
+    grid-row: span 2;
+    width: 100%;
+}
+
+.color-layer img {
+   width: 1000%;
+   height: 1000%;
+   transform: skewX(-20deg);
+}
+
+/* #myPage {*/
+
+ #forkify {
+    transform: skewX(-20deg) translate(5%, 0%) scale(1.1);
+    width: 200%;
+}
+
+#omnifood {
+    transform: skewX(-20deg) translate(10%, 5%) scale(1.1);
+    width: 200%;
+} 
+
+.project.left.active .project-front{
+    transform: scale(1.1);
+    z-index: 300;
+     transition: scale 0.2s linear,  transform 0.2s ease-in;
+     box-shadow: none;
+}
+
+.project.mid.active .project-front{
+    transform: scale(1.1) translate(5%, -90%);
+    z-index: 300;
+    transition: scale 0.2s linear,  transform 0.2s ease-in;
+    box-shadow: none;
+}
+
+.project.right.active .project-front{
+    transform: scale(1.1) translate(10%, -180%);
+    z-index: 300;
+    transition: scale 0.2s linear,  transform 0.2s ease-in;
+    box-shadow: none;
+}
+
+.project-back {
+    height: 200%;
+    width: 100%;
+}
+
+.project.left .project-back{
+    transform: translate(-10%, 0%);
+}
+
+.project.mid .project-back {
+    transform: translate(-5%,-50%);
+}
+
+.project.right .project-back {
+    transform: translate(0, -100%);
+}
+
+.project.active .project-back {
+    transition: all 0.4s 0.4s ease, opacity 0.15s 0.4s ease;
+    z-index: 290;
+}
+
+.project.left.active .project-back {
+    visibility: visible;
+    transform: translate(-10%, 55%);
+    opacity: 1;
+    z-index: 290;
+}
+
+.project.mid.active .project-back {
+    visibility: visible;
+    transform: translate(-5%, 5%);
+    opacity: 1;
+    z-index: 290;
+}
+
+.project.right.active .project-back {
+    visibility: visible;
+    transform: translate(0%, -45%);
+    opacity: 1;
+}
+
+/*SKILLS*/
+/*CONTACTS*/
+
+}
+/* Below 704px (Smaller Tablets) */
+/********************************************/
+@media(max-width: 44em){
+  
+   
+/*HERO*/
+/*ABOUT*/
+/*PROJECTS*/
+/*SKILLS*/
+/*CONTACTS*/
+}
+
+/* Below 544px (Phones) */
+/********************************************/
+@media(max-width: 34em){
+        html {
+        font-size: 44%;
+    }
+/*HERO*/
+/*ABOUT*/
+/*PROJECTS*/
+/*SKILLS*/
+/*CONTACTS*/
+}
+
+
+

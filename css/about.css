@@ -5,8 +5,8 @@
     'about-title about-title about-title'
     'portrait about-text1 about-text1'
     'portrait about-text2 about-text2'
-    'portrait about-text3 about-text3'
-    'orb orb orb';
+    'portrait about-text3 about-text3';
+
      background: radial-gradient(ellipse at bottom, #000000 0%, var(--dark-orange) 100%);
 
      color: var(--light-orange);
@@ -43,18 +43,18 @@
     height: 32rem;
     z-index: 100;
     margin-right: 6.4rem;
-    filter: sepia(30%) blur(0.2rem);
-    opacity: 0.2;
+    filter: sepia(30%) ;
+    opacity: 0.8;
     flex-wrap: wrap;
     transition: all 0.2s ease-in ;
 }
 
-.portrait:hover{
+/* .portrait:hover{
     filter: sepia(30%) blur(0rem);
     opacity: 0.8;
     transform: scale(1.2, 1.2);
     
-}
+} */
 
 .portrait img {
     position: relative;

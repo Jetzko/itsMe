@@ -2,6 +2,7 @@ const links = document.querySelectorAll('.main-nav-link');
 const mainNav = document.querySelector('.main-nav');
 const sphere = document.querySelector('.sphere');
 const orbs = document.querySelectorAll('.orb');
+const scrollIcon = document.querySelector('.scroll-down-icon');
 
 let current = 0;
 
@@ -18,6 +19,7 @@ orbs.forEach((orb) => {
 });
 
 const showLink = function (index) {
+  scrollIcon.classList.add('active');
   links.forEach((link, i) => {
     link.classList.toggle('active', i === index);
     if (i === index) {
@@ -33,6 +35,7 @@ sphere.addEventListener('mouseenter', function (e) {
 
 sphere.addEventListener('mouseleave', function (e) {
   e.preventDefault();
+  scrollIcon.classList.remove('active');
   current = 0;
   links.forEach((link) => {
     link.classList.remove('active');

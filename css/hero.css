@@ -4,23 +4,14 @@
     width: 100%;
     height: 100%;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-content: center;
     text-align: center;
     text-shadow: 0 0 2px var(--light-violet);
     background: radial-gradient(ellipse at bottom, #000000 0%, var(--dark-violet));
 }
 
-.main-title, .secondary-title {
-    font-family: 'Josefin Sans';
-    flex: 0 4 25%;
-   
-}
 
-.main-title {
-    font-size: 5.2rem;
-    font-weight: 600;
-}
 
 .main-title strong {
     color: var(--prime-violet);
@@ -29,15 +20,24 @@
 
 .secondary-title{
     font-size: 4.4rem;
-    font-weight: 500;
 }
 
 .secondary-title strong{
     text-decoration: underline var(--prime-violet);
 }
 
+.sphere-cta-large{
+    display: none;
+}
+
+.sphere-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 .hero.sphere {
-    flex: 0 1 auto;
     height: 44rem;
     width: 44rem;
     border-radius: 50%;
@@ -45,10 +45,15 @@
     overflow: hidden;
     box-shadow: 0 0 10px 1px var(--prime-violet);
     transition: box-shadow 0.2s ease-in;
+    position: relative;
 }
 
 .hero.sphere:hover {
     box-shadow: 0 0 50px 5px var(--prime-violet);
+}
+
+.sphere-cta-small {
+    margin-top: 1.6rem;
 }
 
 .main-nav {
@@ -82,4 +87,20 @@
   filter: blur(0);
   pointer-events: auto;
    text-shadow: 0 0 3px var(--light-violet);
+}
+
+.scroll-down-icon {
+    position: absolute;
+    width: 8%;
+    height: 8%;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.2s ease-in;
+    opacity: 0;
+    filter: drop-shadow(0 0 1px var(--light-violet));
+}
+
+.scroll-down-icon.active {
+    opacity: 0.8;
 }
