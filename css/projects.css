@@ -9,6 +9,7 @@
     row-gap: 1.2rem;
     justify-content: center;
     z-index: 0;
+    outline:  2px solid var(--prime-green);
 }
 
 .projects .section-title{
@@ -42,11 +43,46 @@
     margin: 0.2rem 0 6.4rem 0;
 }
 
+.change-projects {
+    position: absolute; 
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8rem;
+    height: 8rem;
+    background-color: transparent;
+    color: var(--prime-green);
+    border: none;
+    transition: all 0.2s ease ;
+     display: flex;
+     justify-content: center;
+     margin: 0.4rem;
+}
+
+.change-projects:hover,
+.change-projects:focus {
+   border:solid 2px var(--prime-green);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 2px var(--prime-green));
+}
+
+.change-projects:active {
+    filter: drop-shadow(0 0 2px var(--light-green));
+    transform: translateY(-50%) scale(0.8);
+}
+
+.change-projects.left {
+    left: 0;
+}
+
+.change-projects.right {
+    right: 0;
+}
+
 /*----------------------------------------------------------*/
 /*--------------- PROJECT CARDS (CLOSED) -------------------*/
 
 .project {
-     transform: skewX(20deg);
+     transform: skewX(var(--inclinationX));
      z-index: 100;
      position: relative;
 }
@@ -72,7 +108,8 @@
     z-index: 300;
 }
 
-.project-front:hover {
+.project-front:hover,
+.project-front:focus {
     box-shadow: 0 0 2px 2px var(--prime-green);
 }
 
@@ -80,21 +117,21 @@
     transform: scale(1.1);
     z-index: 300;
      transition: scale 0.2s linear,  transform 0.2s ease-in;
-     box-shadow: none;
+     
 }
 
 .project.mid.active .project-front{
     transform: scale(1.1) translate(-90%);
     z-index: 300;
     transition: scale 0.2s linear,  transform 0.2s ease-in;
-    box-shadow: none;
+    
 }
 
 .project.right.active .project-front{
     transform: scale(1.1) translateX(-180%);
     z-index: 300;
     transition: scale 0.2s linear,  transform 0.2s ease-in;
-    box-shadow: none;
+    
 }
 
 .project.inactive {
@@ -104,7 +141,7 @@
 
 .project-title {
     color: var(--prime-green);
-    transform: skewX(-20deg);
+    transform: skewX(var(--minusInclinationX));
 }
 
 .color-layer {
@@ -127,15 +164,15 @@
 }
 
 #myPage{
-    transform: skewX(-20deg) translateX(-5%)
+    transform: skewX(var(--minusInclinationX)) translateX(-5%)
 }
 
 #forkify {
-    transform: skewX(-20deg) translateX(10%);
+    transform: skewX(var(--minusInclinationX)) translateX(10%);
 }
 
 #omnifood {
-    transform: skewX(-20deg) translateX(20%);
+    transform: skewX(var(--minusInclinationX)) translateX(20%);
 }
 
 @keyframes openCard {
@@ -213,7 +250,7 @@
 
 .project-text {
     text-align: center;
-    transform: skewX(-20deg);
+    transform: skewX(var(--minusInclinationX));
 }
 
 .close {
@@ -230,11 +267,17 @@
 
 .close-btn {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 3%;
+    right: 3%;
     cursor: pointer;
     background: none;
     border: none;
+    transition: all 0.2s ease;
+}
+
+.close-btn:focus .close {
+    color: var(--light-green);
+    filter: drop-shadow(0 0 2px var(--light-green));
 }
 
 .close-btn:active {
@@ -243,7 +286,7 @@
 
 .project-back-card {
     margin: 3.2rem;
-    transform: skewX(-20deg);
+    transform: skewX(var(--minusInclinationX));
     
     display: flex;
     flex-direction: column;
@@ -296,16 +339,17 @@
   opacity: 0.2;
 }
 
-.project-link:hover:before {
+.project-link:hover:before,
+.project-link:focus::before {
   width: 100%;
 }
 
 .project-link svg {
     width: 2.4rem;
     filter: drop-shadow(0 0 1px var(--prime-green));
-    transform: skewX(-20deg);
+    transform: skewX(var(--minusInclinationX));
 }
 
 .project-link span {
-    transform: skewX(-20deg);
+    transform: skewX(var(--minusInclinationX));
 }

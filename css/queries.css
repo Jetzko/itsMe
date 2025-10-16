@@ -76,6 +76,7 @@
     'about-text2 about-text2 about-text2'
     'about-text3 about-text3 about-text3';
     justify-items: center;
+    align-items: center;
 }
 
 .portrait {
@@ -85,17 +86,25 @@
 /*PROJECTS*/
 
 .projects .content {
-    grid-template-rows: 0.8fr 4fr
+    grid-template-rows: 0.5fr 4fr 0.5fr;
+    align-content: center;
+}
+
+.projects .section-title{
+    align-self: center;
 }
 
 .project-container {
-    grid-row: 2/3;
     grid-template: repeat(3, 25%) / 1fr;
     justify-self: center;
-    height: 100%;
+    align-content: center;
     width: 80%;
     row-gap: 1.2rem;
     margin: 1.2rem;
+}
+
+.project {
+    transform: skewY(var(--minusInclinationY));
 }
 
 .project-front {
@@ -108,11 +117,13 @@
 
 .project-title {
     margin: 1.6rem;
-    
+    transform: skewY(var(--inclinationY));
 }
 
 .project-text {
     margin: 1.6rem;
+    transform: skewY(var(--inclinationY));
+
 }
 
 .color-layer {
@@ -124,19 +135,20 @@
 
 .color-layer img {
    width: 1000%;
-   height: 1000%;
-   transform: skewX(-20deg);
+   height: 1000%;  
 }
 
-/* #myPage {*/
+#myPage {
+    transform: skewY(var(--inclinationY)) translate(10%, -12%);
+}
 
  #forkify {
-    transform: skewX(-20deg) translate(5%, 0%) scale(1.1);
+    transform: skewY(var(--inclinationY)) translate(5%, -10%) scale(1.1);
     width: 200%;
 }
 
 #omnifood {
-    transform: skewX(-20deg) translate(10%, 5%) scale(1.1);
+    transform: skewY(var(--inclinationY)) translate(10%, -10%) scale(1.1);
     width: 200%;
 } 
 
@@ -148,30 +160,31 @@
 }
 
 .project.mid.active .project-front{
-    transform: scale(1.1) translate(5%, -90%);
+    transform: scale(1.1) translate(0, -90%);
     z-index: 300;
     transition: scale 0.2s linear,  transform 0.2s ease-in;
     box-shadow: none;
 }
 
 .project.right.active .project-front{
-    transform: scale(1.1) translate(10%, -180%);
+    transform: scale(1.1) translate(0, -180%);
     z-index: 300;
     transition: scale 0.2s linear,  transform 0.2s ease-in;
     box-shadow: none;
 }
 
 .project-back {
-    height: 200%;
+    height:200%;
     width: 100%;
+    flex-direction: row;
 }
 
 .project.left .project-back{
-    transform: translate(-10%, 0%);
+    transform: translate(0, 0%);
 }
 
 .project.mid .project-back {
-    transform: translate(-5%,-50%);
+    transform: translate(0,-50%);
 }
 
 .project.right .project-back {
@@ -184,25 +197,39 @@
 }
 
 .project.left.active .project-back {
-    visibility: visible;
-    transform: translate(-10%, 55%);
-    opacity: 1;
-    z-index: 290;
+    transform: translate(0, 52%);
 }
 
 .project.mid.active .project-back {
-    visibility: visible;
-    transform: translate(-5%, 5%);
-    opacity: 1;
-    z-index: 290;
+    transform: translate(0, 2%);
 }
 
 .project.right.active .project-back {
-    visibility: visible;
-    transform: translate(0%, -45%);
-    opacity: 1;
+    transform: translate(0, -48%);
 }
 
+.project-back-card {
+    transform: skewY(var(--inclinationY));
+}
+
+.project-back-card-links {
+    flex-direction: column;
+    height: 100%;
+    /* transform: skewY(var(--inclinationY)); */
+}
+
+.project-link{
+    padding: 1.2rem;
+}
+
+.project-link span,
+.project-link svg {
+    transform: skewY(var(--inclinationY));
+}
+
+/* .close {
+    transform: skewY(var(--inclinationY));
+} */
 /*SKILLS*/
 /*CONTACTS*/
 
@@ -211,7 +238,9 @@
 /********************************************/
 @media(max-width: 44em){
   
-   
+      html {
+        font-size: 44%;
+    }
 /*HERO*/
 /*ABOUT*/
 /*PROJECTS*/
@@ -222,12 +251,42 @@
 /* Below 544px (Phones) */
 /********************************************/
 @media(max-width: 34em){
-        html {
-        font-size: 44%;
-    }
+     
 /*HERO*/
 /*ABOUT*/
 /*PROJECTS*/
+.project-container{
+    grid-row: 2/4;
+}
+
+.project-back{
+    height: 220%;
+}
+
+.project.left .project-back{
+    transform: translate(0, 0%);
+}
+
+.project.mid .project-back {
+    transform: translate(0,-50%);
+}
+
+.project.right .project-back {
+    transform: translate(0, -100%);
+}
+
+.project.left.active .project-back {
+    transform: translate(0, 50%);
+}
+
+.project.mid.active .project-back {
+    transform: translate(0, 5%);
+}
+
+.project.right.active .project-back {
+    transform: translate(0, -40%);
+}
+
 /*SKILLS*/
 /*CONTACTS*/
 }
