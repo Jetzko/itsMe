@@ -15,6 +15,7 @@
     justify-self: center;
     z-index: 30;
     margin-bottom: 2.4rem;
+    
 }
 
 .skills .section-title strong {
@@ -57,7 +58,8 @@
     position: relative;
 }
 
-.skill:hover {
+.skill:hover,
+.skill:focus {
     margin: 0;
     width: 12rem;
     height: 12rem;
@@ -115,8 +117,10 @@
     transition: all 0.2s ease-in;
 }
 
-.skill.active img,
-.skill.active span{
+.skill:hover img,
+.skill:focus img,
+.skill:hover span,
+.skill:focus span{
     filter: grayscale(1) blur(12px);
 }
 
@@ -126,7 +130,9 @@
     filter: drop-shadow(0 0 1px var(--light-blue));
 }
 
-.skill.active .skill-level{
+.skill:hover .skill-level,
+.skill:focus .skill-level
+{
     visibility: visible;
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
@@ -149,8 +155,7 @@
     filter: drop-shadow(0 0 1px var(--light-blue));
 }
 
-.btn-curriculum:link,
-.btn-curriculum:visited {
+.btn-curriculum {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -168,8 +173,14 @@
 }
 
 .btn-curriculum:hover,
-.btn-curriculum:active {
+.btn-curriculum:focus {
     background-color: var(--shadow-blue2);
+    box-shadow: var(--prime-blue);
+    transform: scale(1.1);
+}
+
+.btn-curriculum:active{
+    transform: scale(1.05);
 }
 
 .icon-curriculum {

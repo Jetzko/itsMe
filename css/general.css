@@ -152,6 +152,7 @@ h1 {
 h2 {
     font-size: var(--title);
     font-weight: var(--semibold);
+    text-align: center;
 }
 
 h3, a {

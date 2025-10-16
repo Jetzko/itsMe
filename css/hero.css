@@ -11,8 +11,6 @@
     background: radial-gradient(ellipse at bottom, #000000 0%, var(--dark-violet));
 }
 
-
-
 .main-title strong {
     color: var(--prime-violet);
     text-shadow: 0 0 3px var(--prime-violet);
@@ -48,7 +46,9 @@
     position: relative;
 }
 
-.hero.sphere:hover {
+.sphere:hover,
+.sphere:focus,
+.sphere.active {
     box-shadow: 0 0 50px 5px var(--prime-violet);
 }
 
@@ -82,11 +82,14 @@
   
 }
 
-.main-nav-link.active {
+.sphere:hover .main-nav-link.active,
+.main-nav-link.active,
+.main-nav-link:hover,
+.main-nav-link:focus{
   opacity: 1;
   filter: blur(0);
   pointer-events: auto;
-   text-shadow: 0 0 3px var(--light-violet);
+  text-shadow: 0 0 3px var(--light-violet);
 }
 
 .scroll-down-icon {
@@ -101,6 +104,7 @@
     filter: drop-shadow(0 0 1px var(--light-violet));
 }
 
+.sphere:hover .scroll-down-icon,
 .scroll-down-icon.active {
     opacity: 0.8;
 }

@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/queries.css">
 
     <script defer src="js/index.js"></script>
+    <script defer src='js/hero.js'></script>
     <script defer src="js/skills.js"></script>
     <script defer src="js/projects.js"></script>
     <script defer src="js/contacts.js"></script>
@@ -423,33 +424,10 @@
           <div id="stars2" class="background"></div>
           <div id="stars3" class="background"></div>
           <h2 class="section-title">Le mie <strong>Competenze</strong></h2>
-          <div class="curriculum">
-            <!-- <span>Il mio curriculum</span> -->
-            <a
-              href="./src/Curriculum 08-24.pdf"
-              download="Curriculum_AndreaDeFilippi"
-              class="btn-curriculum"
-            >
-              <span>Curriculum&nbsp;</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="icon-curriculum"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
-                />
-              </svg>
-            </a>
-          </div>
+         
           <ul class="skill-list">
             <!-- <div class="short-row"> -->
-            <li class="skill first-row">
+            <li class="skill first-row first" tabindex='0'>
               <img src="./src/webp/html-logo.webp " alt="HTML" />
               <span>HTML</span>
               <span class="skill-level">
@@ -469,7 +447,7 @@
                 Certificato Udemy</span
               >
             </li>
-            <li class="skill first-row">
+            <li class="skill first-row first" tabindex='0'>
               <img src="./src/webp/css-logo.webp" alt="CSS"/>
               <span>CSS</span>
               <span class="skill-level"
@@ -489,7 +467,7 @@
                 Certificato Udemy</span
               >
             </li>
-            <li class="skill first-row">
+            <li class="skill first-row zero" tabindex='0'>
               <img src="./src/webp/javascript-logo.webp" alt="javascript" />
               <span>Javascript</span>
               <span class="skill-level"
@@ -510,7 +488,7 @@
               >
             </li>
             <!-- </div> -->
-            <li class="skill right second-row">
+            <li class="skill second-row first" tabindex='0'>
               <img src="./src/webp/git-logo.webp" alt="git" />
               <span>Git</span>
               <span class="skill-level"
@@ -530,7 +508,7 @@
               >
             </li>
             </li>
-            <li class="skill second-row">
+            <li class="skill second-row second" tabindex='0'>
               <img src="./src/webp/figma-logo.webp" alt="Figma" />
               <span>Figma</span>
               <span class="skill-level"
@@ -549,7 +527,7 @@
                 <br />Autodidatta</span
               >
             </li>
-            <li class="skill second-row">
+            <li class="skill second-row second" tabindex='0'>
               <img src="./src/webp/sass-logo.webp" alt="Sass" />
               <span>Sass</span>
               <span class="skill-level"
@@ -578,7 +556,7 @@
             </li>
         
 
-            <li class="skill second-row">
+            <li class="skill second-row second" tabindex='0'>
               <img src="./src/webp/node-logo.webp" alt="Node.js" />
               <span>Node.js </span>
               <span class="skill-level"
@@ -605,7 +583,7 @@
                 Studi in corso...</span
               >
         
-            <li class="skill second-row">
+            <li class="skill second-row third" tabindex='0'>
               <img src="./src/webp/express-logo.webp" alt="Express" />
               <span>Express </span>
               <span class="skill-level"
@@ -634,7 +612,7 @@
             </li>
 
 
-            <li class="skill third-row">
+            <li class="skill third-row third" tabindex='0'>
               <img src="./src/webp/mongo-db.webp" alt="MongoDB" />
               <span>MongoDB </span>
               <span class="skill-level"
@@ -662,7 +640,7 @@
               >
             </li>
           
-                <li class="skill third-row">
+                <li class="skill third-row third" tabindex='0'>
               <img src="./src/webp/tailwind-logo.webp" alt="Tailwind" />
               <span>Tailwind </span>
               <span class="skill-level"
@@ -685,7 +663,7 @@
               >
             </li>
             <!-- <div class="short-row"> -->
-            <li class="skill third-row">
+            <li class="skill third-row fourth" tabindex='0'>
               <img src="./src/webp/react-logo.webp" alt="React" />
               <span>React </span>
               <span class="skill-level"
@@ -707,7 +685,7 @@
                 Prossimamente!</span
               >
             </li>
-            <li class="skill last third-row">
+            <li class="skill last third-row fourth" tabindex='0'>
               <img src="./src/webp/next-logo.webp" alt="Next.js" />
               <span>Next.js </span>
               <span class="skill-level"
@@ -729,7 +707,7 @@
                 Prossimamente!</span
               >
             </li>
-            <li class="skill third-row">
+            <li class="skill third-row fourth" tabindex='0'>
               <img src="./src/webp/redux-logo.webp" alt="Redux" />
               <span>Redux </span>
               <span class="skill-level"
@@ -753,6 +731,30 @@
             </li>
             <!-- </div> -->
           </ul>
+           <div class="curriculum">
+            <!-- <span>Il mio curriculum</span> -->
+            <a
+              href="./src/Curriculum 08-24.pdf"
+              download="Curriculum_AndreaDeFilippi"
+              class="btn-curriculum"
+            >
+              <span>Curriculum&nbsp;</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon-curriculum"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+                />
+              </svg>
+            </a>
+          </div>
           <div class="orb" title='Home'>
             <a href="#hero" class="orb-anchor"
               ><svg

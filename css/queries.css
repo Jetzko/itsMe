@@ -259,35 +259,35 @@
     grid-row: 2/4;
 }
 
-.project-back{
-    height: 220%;
-}
 
-.project.left .project-back{
-    transform: translate(0, 0%);
-}
-
-.project.mid .project-back {
-    transform: translate(0,-50%);
-}
-
-.project.right .project-back {
-    transform: translate(0, -100%);
-}
-
-.project.left.active .project-back {
-    transform: translate(0, 50%);
-}
-
-.project.mid.active .project-back {
-    transform: translate(0, 5%);
-}
-
-.project.right.active .project-back {
-    transform: translate(0, -40%);
-}
 
 /*SKILLS*/
+
+.skill-list {
+    grid-template: repeat(5, 1fr) / repeat(3, 1fr);
+}
+
+.zero {
+    grid-row: 1 !important;
+    grid-column: 2!important;
+}
+
+.first {
+    grid-row: 2!important;
+}
+
+.second {
+    grid-row: 3!important;
+}
+
+.third {
+    grid-row: 4!important;
+}
+
+.fourth {
+    grid-row: 5!important;
+}
+
 /*CONTACTS*/
 }
 
