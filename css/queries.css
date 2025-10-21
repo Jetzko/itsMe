@@ -484,6 +484,10 @@
     padding: 0.8rem;
 }
 
+.contact-title {
+    width: 80%;
+}
+
 .contact svg {
     width: 4rem;
     height: 4rem;

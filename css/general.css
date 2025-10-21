@@ -196,7 +196,8 @@ span {
 }
 
 .orb:hover,
-.orb:focus {
+.orb:focus,
+.orb:active {
     box-shadow: 0 0 10px 10px var(--prime-violet);
 }
 
