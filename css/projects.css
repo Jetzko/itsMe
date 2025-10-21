@@ -8,7 +8,7 @@
     grid-template: 0.8fr 6fr / repeat(4, 1fr);
     row-gap: 1.2rem;
     justify-content: center;
-    z-index: 0;
+    z-index: var(--background);
     outline:  2px solid var(--prime-green);
 }
 
@@ -56,12 +56,11 @@
      display: flex;
      justify-content: center;
      margin: 0.4rem;
+     z-index: var(--foreground);
 }
 
 .change-projects:hover,
 .change-projects:focus {
-   border:solid 2px var(--prime-green);
-  border-radius: 50%;
   filter: drop-shadow(0 0 2px var(--prime-green));
 }
 
@@ -83,11 +82,11 @@
 
 .project {
      transform: skewX(var(--inclinationX));
-     z-index: 100;
+     z-index: var(--midground);
      position: relative;
 }
 
-.project-front {
+.front-card {
     position: absolute;
     top: 0;
     left: 0;
@@ -105,31 +104,31 @@
     overflow: hidden;
     cursor: pointer;
     transition: scale 0.2s 0.4s linear,  transform 0.2s 0.4s ease-in;
-    z-index: 300;
+    z-index: var(--foreground);
 }
 
-.project-front:hover,
-.project-front:focus {
+.project-card:hover .front-card,
+.project-card:focus .front-card {
     box-shadow: 0 0 2px 2px var(--prime-green);
 }
 
-.project.left.active .project-front{
+.project.left.active .front-card{
     transform: scale(1.1);
-    z-index: 300;
+    z-index: var(--foreground);
      transition: scale 0.2s linear,  transform 0.2s ease-in;
      
 }
 
-.project.mid.active .project-front{
+.project.mid.active .front-card{
     transform: scale(1.1) translate(-90%);
-    z-index: 300;
+    z-index: var(--foreground);
     transition: scale 0.2s linear,  transform 0.2s ease-in;
     
 }
 
-.project.right.active .project-front{
+.project.right.active .front-card{
     transform: scale(1.1) translateX(-180%);
-    z-index: 300;
+    z-index: var(--foreground);
     transition: scale 0.2s linear,  transform 0.2s ease-in;
     
 }
@@ -145,7 +144,7 @@
 }
 
 .color-layer {
-    z-index: 100;
+    z-index: var(--midground);
     position: relative;
     display: inline-block;
     display: flex;
@@ -155,7 +154,7 @@
 }
 
 .project img {
-    z-index: 100;
+    z-index: var(--midground);
     position: relative;
     width: 300%;
     max-height: 40rem;
@@ -188,7 +187,7 @@
 /* --------------------------------------------- */
 /* ---------- PROJECT CARDS (OPENED) ----------- */
 
-.project-back {
+.back-card {
     position: absolute;
     top: 0;
     left: 0;
@@ -211,38 +210,38 @@
     transition: all 0.4s ease, opacity 0.15s ease;          
 }
 
-.project.left .project-back{
+.project.left .back-card{
     transform: translateX(0%);
 }
 
-.project.mid .project-back {
+.project.mid .back-card {
     transform: translateX(-50%);
 }
 
-.project.right .project-back {
+.project.right .back-card {
     transform: translateX(-100%);
 }
 
-.project.active .project-back {
+.project.active .back-card {
     transition: all 0.4s 0.4s ease, opacity 0.15s 0.4s ease;
-    z-index: 290;
+    z-index: var(--midground);
 }
 
-.project.left.active .project-back {
+.project.left.active .back-card {
     visibility: visible;
     transform: translateX(50%);
     opacity: 1;
-     z-index: 290;
+     z-index: var(--midground);
 }
 
-.project.mid.active .project-back {
+.project.mid.active .back-card {
     visibility: visible;
     transform: translateX(0);
     opacity: 1;
-     z-index: 290;
+     z-index: var(--midground);
 }
 
-.project.right.active .project-back {
+.project.right.active .back-card {
     visibility: visible;
     transform: translateX(-50%);
     opacity: 1;

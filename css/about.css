@@ -41,7 +41,7 @@
     align-content: center;
     width: 32rem;
     height: 32rem;
-    z-index: 100;
+    z-index: var(--midground);
     margin-right: 6.4rem;
     filter: sepia(30%) ;
     opacity: 0.8;

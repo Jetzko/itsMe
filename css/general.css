@@ -98,6 +98,11 @@ Small:
 
 --inclinationY: 5deg;
 --minusInclinationY: -5deg;
+
+--highlight: 300;
+--foreground: 200;
+--midground: 100;
+--background: 0;
 }
 
 *{
@@ -177,7 +182,7 @@ p, span {
     justify-self: center;
     border: none;
     border-radius: 50%;
-    z-index: 30;
+    z-index: var(--foreground);
     transition: all 0.2s ease-in;
     cursor: pointer;
     display: flex;
@@ -217,7 +222,7 @@ p, span {
 
 .background {
     position: absolute;
-    z-index: 30;
+    z-index: var(--background);
     top: 0;
     left: 0;
 }

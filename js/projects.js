@@ -1,8 +1,11 @@
-const projectFrontCards = document.querySelectorAll('.project-front');
+const projectFrontCards = document.querySelectorAll('.front-card');
 const projects = Array.from(document.querySelectorAll('.project'));
 const closeButtons = document.querySelectorAll('.close-btn');
+const arrowLeft = document.querySelector('.change-projects.left');
+const arrowRight = document.querySelector('.change-projects.right');
 
 let inactives;
+let currentIndex = 0;
 
 const showCards = function () {
   inactives = projects.filter(
@@ -27,33 +30,59 @@ const closeProject = function () {
   setTimeout(hideCards, '500');
 };
 
-projectFrontCards.forEach((card) => {
-  card.addEventListener('click', () => {
-    if (card.closest('.project').classList.contains('active')) {
-      closeProject.call(card);
-      document.activeElement.blur();
-    } else {
-      openProject.call(card);
+const updateVisibleProject = function (index) {
+  projects.forEach((project, i) => {
+    project.classList.remove('visible');
+    if (i === index) {
+      project.classList.add('visible');
+      project.focus();
     }
   });
-  card.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
+};
+
+if (window.matchMedia('(max-width: 34em)').matches) {
+  updateVisibleProject(currentIndex);
+
+  arrowLeft.addEventListener('click', () => {
+    console.log('click left');
+    currentIndex = (currentIndex - 1 + projects.length) % projects.length;
+    updateVisibleProject(currentIndex);
+  });
+
+  arrowRight.addEventListener('click', () => {
+    console.log('click right');
+    currentIndex = (currentIndex + 1) % projects.length;
+    updateVisibleProject(currentIndex);
+  });
+} else {
+  projectFrontCards.forEach((card) => {
+    card.addEventListener('click', () => {
       if (card.closest('.project').classList.contains('active')) {
         closeProject.call(card);
         document.activeElement.blur();
       } else {
         openProject.call(card);
       }
-    }
+    });
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        if (card.closest('.project').classList.contains('active')) {
+          closeProject.call(card);
+          document.activeElement.blur();
+        } else {
+          openProject.call(card);
+        }
+      }
+    });
   });
-});
 
-closeButtons.forEach((button) => {
-  button.addEventListener('click', closeProject.bind(button));
-  button.addEventListener('keydown', (e) => {
-    if (e.key === 'enter' || e.key === ' ') {
-      closeProject.call(button);
-      console.log(button);
-    }
+  closeButtons.forEach((button) => {
+    button.addEventListener('click', closeProject.bind(button));
+    button.addEventListener('keydown', (e) => {
+      if (e.key === 'enter' || e.key === ' ') {
+        closeProject.call(button);
+        console.log(button);
+      }
+    });
   });
-});
+}

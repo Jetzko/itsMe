@@ -4,7 +4,7 @@
     color: var(--light-yellow);
     text-shadow: 0 0 3px var(--light-yellow);
     padding: 1.2rem;
-    z-index: 0;
+    z-index: var(--background);
 
     display: flex;
     flex-direction: column;
@@ -26,7 +26,7 @@
     width: 80%;
     display: flex;
     justify-content: space-evenly;
-    z-index: 200;
+    z-index: var(--foreground);
 }
 
 .contact {
@@ -38,7 +38,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 200;
+    z-index: var(--foreground);
     transition: all 0.3s ease;
     border: solid 2px var(--prime-yellow);
 }
@@ -54,7 +54,7 @@
   top: 0;
   
   opacity: 0.2;
-  z-index: 100;
+  z-index: var(--midground);
   
 }
 

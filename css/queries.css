@@ -85,8 +85,27 @@
 
 /*PROJECTS*/
 
+/* .close {
+    transform: skewY(var(--inclinationY));
+} */
+/*SKILLS*/
+/*CONTACTS*/
+
+}
+/* Below 704px (Smaller Tablets) */
+/********************************************/
+@media(min-width: 34em) and (max-width: 44em){
+  
+      html {
+        font-size: 44%;
+    }
+/*HERO*/
+/*ABOUT*/
+/*PROJECTS*/
+
+
 .projects .content {
-    grid-template-rows: 0.5fr 4fr 0.5fr;
+    grid-template-rows: 0.5fr 4fr;
     align-content: center;
 }
 
@@ -107,7 +126,7 @@
     transform: skewY(var(--minusInclinationY));
 }
 
-.project-front {
+.front-card {
     display: grid;
     grid-template: 1fr 1fr / 1fr 2fr;
     justify-items: center;
@@ -152,59 +171,59 @@
     width: 200%;
 } 
 
-.project.left.active .project-front{
+.project.left.active .front-card{
     transform: scale(1.1);
-    z-index: 300;
+    z-index: var(--foreground);
      transition: scale 0.2s linear,  transform 0.2s ease-in;
      box-shadow: none;
 }
 
-.project.mid.active .project-front{
+.project.mid.active .front-card{
     transform: scale(1.1) translate(0, -90%);
-    z-index: 300;
+    z-index: var(--foreground);
     transition: scale 0.2s linear,  transform 0.2s ease-in;
     box-shadow: none;
 }
 
-.project.right.active .project-front{
+.project.right.active .front-card{
     transform: scale(1.1) translate(0, -180%);
-    z-index: 300;
+    z-index: var(--foreground);
     transition: scale 0.2s linear,  transform 0.2s ease-in;
     box-shadow: none;
 }
 
-.project-back {
+.back-card {
     height:200%;
     width: 100%;
     flex-direction: row;
 }
 
-.project.left .project-back{
+.project.left .back-card{
     transform: translate(0, 0%);
 }
 
-.project.mid .project-back {
+.project.mid .back-card {
     transform: translate(0,-50%);
 }
 
-.project.right .project-back {
+.project.right .back-card {
     transform: translate(0, -100%);
 }
 
-.project.active .project-back {
+.project.active .back-card {
     transition: all 0.4s 0.4s ease, opacity 0.15s 0.4s ease;
-    z-index: 290;
+    z-index: var(--midground);
 }
 
-.project.left.active .project-back {
+.project.left.active .back-card {
     transform: translate(0, 52%);
 }
 
-.project.mid.active .project-back {
+.project.mid.active .back-card {
     transform: translate(0, 2%);
 }
 
-.project.right.active .project-back {
+.project.right.active .back-card {
     transform: translate(0, -48%);
 }
 
@@ -227,23 +246,6 @@
     transform: skewY(var(--inclinationY));
 }
 
-/* .close {
-    transform: skewY(var(--inclinationY));
-} */
-/*SKILLS*/
-/*CONTACTS*/
-
-}
-/* Below 704px (Smaller Tablets) */
-/********************************************/
-@media(max-width: 44em){
-  
-      html {
-        font-size: 44%;
-    }
-/*HERO*/
-/*ABOUT*/
-/*PROJECTS*/
 /*SKILLS*/
 /*CONTACTS*/
 }
@@ -252,19 +254,130 @@
 /********************************************/
 @media(max-width: 34em){
      
+     html {
+        font-size: 44%;
+    }
 /*HERO*/
 /*ABOUT*/
 /*PROJECTS*/
 .project-container{
     grid-row: 2/4;
+    display: flex;
+    white-space: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    overflow-x: auto;
+    scrollbar-width: none;
+    position: relative;
 }
 
+.project {
+    position: absolute;
+    background-color: transparent;
+    perspective: 1000px;
+    height: 90%;
+    width: 70%;
+    pointer-events: none;
+}
 
+.project-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.front-card{
+    visibility: hidden ;
+    opacity: 0;
+    filter: blur(1rem);
+    transition: opacity 0.4s, filter 0.4s;
+    pointer-events: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.front-card img {
+    
+    transform: translateY(10%);
+}
+
+.project.visible .front-card {
+  visibility: visible;
+  opacity: 1;
+  filter: blur(0);
+  pointer-events: auto;
+}
+
+.project:hover .project-card, 
+.project:focus .project-card {
+    transform: rotateY(180deg);
+}
+
+.front-card, .back-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.back-card {
+    background-color: var(--dark-green);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg) !important;
+}
+
+.project.visible:hover .back-card,
+.project.visible:focus .back-card {
+    opacity: 1;
+    visibility: visible;
+}
+
+.project-back-card{
+    height: 60%;
+    width: 100%;
+    
+}
+
+.project-back-card p {
+    height: 100%;
+    text-wrap: balance;
+}
+
+.close {
+    display: none;
+}
 
 /*SKILLS*/
 
 .skill-list {
-    grid-template: repeat(5, 1fr) / repeat(3, 1fr);
+    grid-column: 1/7;
+    grid-row: 2/7;
+    grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+    max-width: 100%;
+    gap: 0.4rem;
+}
+
+.skill{
+    width: 8rem;
+    height: 8rem;
+}
+
+.skill:hover,
+.skill:focus {
+    height: 12rem;
+    width: 12rem;
 }
 
 .zero {
@@ -286,6 +399,10 @@
 
 .fourth {
     grid-row: 5!important;
+}
+
+.curriculum {
+    grid-row: 7/8;
 }
 
 /*CONTACTS*/
