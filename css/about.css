@@ -1,11 +1,7 @@
 
 .about .content {
     display: grid;
-    grid-template-areas:
-    'about-title about-title about-title'
-    'portrait about-text1 about-text1'
-    'portrait about-text2 about-text2'
-    'portrait about-text3 about-text3';
+    grid-template: 1fr 5fr/ 1fr 1fr;
 
      background: radial-gradient(ellipse at bottom, #000000 0%, var(--dark-orange) 100%);
 
@@ -16,11 +12,12 @@
 }
 
 .about .section-title {
-    grid-area: about-title;
     display: flex;
     justify-content: center;
     font-weight: 600;
     font-size: var(--title);
+    grid-column: span 2;
+    grid-row: span 1;
 }
 
 .about em {
@@ -34,7 +31,8 @@
 }
 
 .portrait {
-    grid-area: portrait;
+    grid-row: 2/3;
+    grid-column: 1/2;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -64,27 +62,17 @@
     border-radius: 50%;
 }
 
-.about .inner-paragraph {
+.about-paragraph {
+    grid-row: 2/3;
+    grid-column: 2/3;
     display: flex;
-    justify-content: flex-start;
-    font-size: 2rem;
-    font-weight: 500;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 80%;
 }
 
-.about .description {
-    grid-area: about-text1;
-    align-self: flex-end;
-}
 
-.about .history {
-    grid-area: about-text2;
-    justify-self: flex-end;
-}
-
-.about .hobby {
-    grid-area: about-text3;
-    align-self: flex-start;
-}
 
 
 
