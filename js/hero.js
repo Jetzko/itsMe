@@ -75,19 +75,19 @@ links.forEach((link) => {
 // });
 
 // Touch swipe event
-// let startX = null;
-// document.querySelector('.main-nav').addEventListener('touchstart', (e) => {
-//   startX = e.touches[0].clientX;
-// });
-// document.querySelector('.main-nav').addEventListener('touchend', (e) => {
-//   if (startX === null) return;
-//   let endX = e.changedTouches[0].clientX;
-//   if (endX < startX - 30) {
-//     current = (current + 1) % links.length;
-//     showLink(current);
-//   } else if (endX > startX + 30) {
-//     current = (current - 1 + links.length) % links.length;
-//     showLink(current);
-//   }
-//   startX = null;
-// });
+let startX = null;
+document.querySelector('.main-nav').addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX;
+});
+document.querySelector('.main-nav').addEventListener('touchend', (e) => {
+  if (startX === null) return;
+  let endX = e.changedTouches[0].clientX;
+  if (endX < startX - 30) {
+    current = (current + 1) % links.length;
+    showLink(current);
+  } else if (endX > startX + 30) {
+    current = (current - 1 + links.length) % links.length;
+    showLink(current);
+  }
+  startX = null;
+});

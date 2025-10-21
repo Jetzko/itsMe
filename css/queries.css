@@ -258,7 +258,26 @@
         font-size: 44%;
     }
 /*HERO*/
+.main-title {
+    font-size: var(--title);
+}
+
+.secondary-title {
+    font-size: var(--subtitle);
+}
+
+.hero.sphere{
+    height: 32rem;
+    width: 32rem;
+}
+
 /*ABOUT*/
+
+.portrait img{
+    height: 24rem;
+    width: 24rem;
+}
+
 /*PROJECTS*/
 .project-container{
     grid-row: 2/4;
@@ -273,7 +292,9 @@
 }
 
 .change-projects{
-    visibility: visible
+    visibility: visible;
+    height: 4rem;
+    width: 4rem;
 }
 
 .project {
@@ -283,6 +304,7 @@
     height: 90%;
     width: 70%;
     pointer-events: none;
+    transform: none;
 }
 
 .project-card {
@@ -307,8 +329,11 @@
     align-items: center;
 }
 
+.project-title {
+    transform: none;
+}
+
 .front-card img {
-    
     transform: translateY(10%);
 }
 
@@ -332,6 +357,22 @@
   backface-visibility: hidden;
 }
 
+.project-img:nth-child(0){
+    transform: translateX(-5%)
+}
+
+.project-img:nth-child(1){
+    transform: translateX(10%);
+}
+
+.project-img:nth-child(2){
+    transform: translateX(20%);
+}
+
+.project-text {
+    transform: none;
+}
+
 .back-card {
     background-color: var(--dark-green);
     position: absolute;
@@ -340,6 +381,8 @@
     top: 0;
     left: 0;
     transform: rotateY(180deg) !important;
+    justify-content: space-between;
+    padding: 2.4rem;
 }
 
 .project.visible:hover .back-card,
@@ -351,12 +394,18 @@
 .project-back-card{
     height: 60%;
     width: 100%;
-    
+    transform: none;
 }
 
-.project-back-card p {
+.project-description {
     height: 100%;
     text-wrap: balance;
+    text-align: left;
+    font-size: var(--span);
+}
+
+.project-back-card-links {
+    flex-direction: column;
 }
 
 .close {
@@ -410,6 +459,36 @@
 }
 
 /*CONTACTS*/
+
+.section .contacts {
+    word-wrap: break-word;
+}
+
+.contact {
+    padding: 0.8rem;
+}
+
+.contact svg {
+    width: 4rem;
+    height: 4rem;
+}
+
+.contact .cta {
+    display: inline-block;
+   
+    text-wrap: balance;
+}
+
+.contact:hover .cta,
+.contact:focus .cta {
+     transform: translate(-50%, -50%) scale(0.8);  
+}
+
+.orb {
+    width: 3.2rem;
+    height: 3.2rem;
+}
+
 }
 
 

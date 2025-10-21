@@ -93,8 +93,8 @@ Small:
 --semibold: 600;
 --bold: 700;
 
---inclinationX: 15deg;
---minusInclinationX: -15deg;
+--inclinationX: 10deg;
+--minusInclinationX: -10deg;
 
 --inclinationY: 5deg;
 --minusInclinationY: -5deg;
@@ -165,8 +165,13 @@ h3, a {
     font-weight: var(--medium);
 }
 
-p, span {
+p {
     font-size: var(--paragraph);
+    font-weight: var(--default);
+}
+
+span {
+    font-size: var(--span);
     font-weight: var(--default);
 }
 

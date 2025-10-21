@@ -163,15 +163,15 @@
     opacity: 1;
 }
 
-#myPage{
+.project-img:nth-child(0){
     transform: skewX(var(--minusInclinationX)) translateX(-5%)
 }
 
-#forkify {
+.project-img:nth-child(1){
     transform: skewX(var(--minusInclinationX)) translateX(10%);
 }
 
-#omnifood {
+.project-img:nth-child(2){
     transform: skewX(var(--minusInclinationX)) translateX(20%);
 }
 

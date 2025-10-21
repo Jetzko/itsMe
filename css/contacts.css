@@ -132,9 +132,10 @@
     align-self: center;
     flex-direction: row;
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-evenly; 
     margin-bottom: 1.2rem;
     flex: 0 0 auto;
+    flex-wrap: wrap;
 }
 
 .labels span {

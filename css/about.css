@@ -12,6 +12,7 @@
      color: var(--light-orange);
      text-shadow: 0 0 3px var(--light-orange);
      padding: 1.2rem;
+     text-wrap: balance;
 }
 
 .about .section-title {
