@@ -272,6 +272,10 @@
     position: relative;
 }
 
+.change-projects{
+    visibility: visible
+}
+
 .project {
     position: absolute;
     background-color: transparent;

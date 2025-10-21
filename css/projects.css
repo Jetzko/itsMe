@@ -57,6 +57,7 @@
      justify-content: center;
      margin: 0.4rem;
      z-index: var(--foreground);
+     visibility: hidden;
 }
 
 .change-projects:hover,
