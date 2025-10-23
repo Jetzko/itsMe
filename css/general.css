@@ -114,15 +114,15 @@ Small:
     outline: none;
 }
 
-@media (max-width:84em){
+
 html{
     /*10px / 16px = 0.625 => 62.5%*/
     /*Percentage of user's browser font size*/
-    font-size: 62.5%;
+    font-size: 50%;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
-}
+
 
 body{
     font-family: 'Lato', sans-serif;
@@ -193,6 +193,8 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
+    outline: none;
+    user-select: none;
 }
 
 .orb:hover,
@@ -213,7 +215,7 @@ span {
     justify-content: center;
     align-items: center;
     opacity: 0.6;
-   
+    user-select: none;
     transition: all 0.2s ease-in;
 }
 

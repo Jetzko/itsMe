@@ -78,16 +78,16 @@ links.forEach((link) => {
 let startX = null;
 document.querySelector('.main-nav').addEventListener('touchstart', (e) => {
   startX = e.touches[0].clientX;
+  console.log(startX);
 });
 document.querySelector('.main-nav').addEventListener('touchend', (e) => {
   if (startX === null) return;
   let endX = e.changedTouches[0].clientX;
+  console.log(endX);
   if (endX < startX - 30) {
-    current = (current + 1) % links.length;
-    showLink(current);
+    showLink((current + 1) % links.length);
   } else if (endX > startX + 30) {
-    current = (current - 1 + links.length) % links.length;
-    showLink(current);
+    showLink((current - 1 + links.length) % links.length);
   }
   startX = null;
 });

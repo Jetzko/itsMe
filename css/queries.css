@@ -2,7 +2,6 @@
 /********************************************/
 @media(min-width:84em){
     html {
-        scroll-behavior: smooth;
         font-size: 62.5%;
     }
     
@@ -283,6 +282,7 @@
     width: 32rem;
 }
 
+
 /*ABOUT*/
 
 .portrait img{
@@ -408,7 +408,6 @@
 }
 
 .project-back-card{
-    height: 60%;
     width: 100%;
     transform: none;
 }
@@ -422,6 +421,7 @@
 
 .project-back-card-links {
     flex-direction: column;
+    height: 100%;
 }
 
 .close {

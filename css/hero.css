@@ -66,22 +66,22 @@
     justify-content: space-around;
     align-items: center;
     overflow-x: auto;
-    scrollbar-width: none; 
+    scrollbar-width: none;
 }
 
-.main-nav-link { 
+.main-nav-link {
     font-family: 'Josefin Sans', sans-serif;
     font-size: var(--subtitle);
-    flex: 0 0 44rem;
     color: var(--light-violet);
-   
+    flex: 0 0 44rem;
     opacity: 0;
     filter: blur(1rem);
     transition: opacity 0.4s, filter 0.4s;
-    pointer-events: none;
 }
 
 .sphere:hover .main-nav-link.active,
+.sphere:focus .main-nav-link.active,
+.main-nav:active,
 .main-nav-link.active,
 .main-nav-link:hover,
 .main-nav-link:focus{
