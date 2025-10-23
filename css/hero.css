@@ -65,8 +65,9 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    overflow-x: auto;
+    overflow: hidden;
     scrollbar-width: none;
+    touch-action: none;
 }
 
 .main-nav-link {

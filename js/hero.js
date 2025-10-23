@@ -18,7 +18,7 @@ const showLink = function (index) {
   // Aggiungi .active e focus al nuovo link
   links[index].classList.add('active');
   links[index].focus();
-  links[index].scrollIntoView({ behavior: 'smooth', block: 'center' });
+  // links[index].scrollIntoView({ behavior: 'smooth', block: 'center' });
   current = index;
 };
 
@@ -56,37 +56,46 @@ links.forEach((link) => {
   });
 });
 
-// Wheel event
+// const mediaQuery = window.matchMedia('(max-width: 59em)')
 
-// links.forEach((link) => {
-//   link.addEventListener('click', (e) => {
-//     const targetId = link.getAttribute('href');
-//     const section = document.querySelector(targetId);
+// if(mediaQuery.matches) {
+// sphere.replaceWith(sphere.cloneNode(true))
 
-//     // Rimuovo "play" da tutti
-//     document.querySelectorAll('.content').forEach((el) => {
-//       el.classList.remove('play');
-//     });
+// const newSphere = document.querySelector('.sphere')
+// const newMainNav = newSphere.querySelector('.main-nav')
 
-//     // Aggiungo "play" solo al contenuto della sezione scelta
-//     const content = section.querySelector('.content');
-//     content.classList.add('play');
-//   });
-// });
+// newSphere.addEventListener('click', (e) => {
+//   if (e.target.classList.contains('main-nav-link')) return;
+
+//   newSphere.classList.toggle('active')
+// })
+
+// newMainNav.addEventListener('click', (e) => {
+//   if(e.target.classList.contains('main-nav-link')) {
+//     setTimeout(() => {
+//       newSphere.classList.remove
+//     })
+
+//   }
+// })
 
 // Touch swipe event
+
 let startX = null;
+const sensitivity = 30;
+
 document.querySelector('.main-nav').addEventListener('touchstart', (e) => {
   startX = e.touches[0].clientX;
   console.log(startX);
 });
 document.querySelector('.main-nav').addEventListener('touchend', (e) => {
   if (startX === null) return;
-  let endX = e.changedTouches[0].clientX;
+  const endX = e.changedTouches[0].clientX;
+  const deltaX = endX - startX;
   console.log(endX);
-  if (endX < startX - 30) {
+  if (deltaX < -sensitivity) {
     showLink((current + 1) % links.length);
-  } else if (endX > startX + 30) {
+  } else if (deltaX > sensitivity) {
     showLink((current - 1 + links.length) % links.length);
   }
   startX = null;

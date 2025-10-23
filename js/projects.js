@@ -44,13 +44,11 @@ if (window.matchMedia('(max-width: 34em)').matches) {
   updateVisibleProject(currentIndex);
 
   arrowLeft.addEventListener('click', () => {
-    console.log('click left');
     currentIndex = (currentIndex - 1 + projects.length) % projects.length;
     updateVisibleProject(currentIndex);
   });
 
   arrowRight.addEventListener('click', () => {
-    console.log('click right');
     currentIndex = (currentIndex + 1) % projects.length;
     updateVisibleProject(currentIndex);
   });
