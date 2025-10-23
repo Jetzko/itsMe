@@ -8,6 +8,7 @@ let current = 0;
 
 const showLink = function (index) {
   scrollIcon.classList.add('active');
+  mainNav.style.visibility = 'visible';
   // Rimuovi .active solo dal link precedente
   links.forEach((link, i) => {
     if (i === current) {
@@ -52,6 +53,12 @@ links.forEach((link) => {
   link.addEventListener('blur', () => {
     sphere.classList.remove('active');
   });
+});
+
+sphere.addEventListener('click', (e) => {
+  e.preventDefault();
+  sphere.classList.add('active');
+  showLink(current);
 });
 
 // const mediaQuery = window.matchMedia('(max-width: 59em)')

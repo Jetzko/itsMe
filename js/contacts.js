@@ -1,6 +1,7 @@
 const emailLink = document.querySelector('.email');
 const savedPopUp = document.querySelector('.saved');
 const allCta = Array.from(document.querySelectorAll('.cta'));
+const contacts = Array.from(document.querySelectorAll('.contact'));
 const labels = document.querySelector('.labels');
 const spanArticle = labels.querySelector('.label-article');
 const spanAggettive = labels.querySelector('.label-aggettive');
@@ -9,6 +10,7 @@ const spanSubject2 = labels.querySelector('.label-subject2');
 const spanDefinition = labels.querySelector('.label-definition');
 
 const copyEmail = function () {
+  console.log('CopyEmail started');
   const copyText = 'andreadefilippi68@gmail.com';
 
   // Select the text field
@@ -23,6 +25,7 @@ const copyEmail = function () {
       cta.classList.add('active');
       savedPopUp.classList.add('active');
       emailLink.classList.add('active');
+
       setTimeout(function () {
         emailLink.classList.remove('active');
         cta.classList.remove('active');
@@ -32,7 +35,85 @@ const copyEmail = function () {
   });
 };
 
-emailLink.addEventListener('click', copyEmail);
+// contacts.forEach((contact) => {
+//   contact.addEventListener('click', () => {
+//     setTimeout(function () {
+//       contact.classList.add('active');
+//       setTimeout(function () {
+//         contact.classList.remove('active');
+//       }, 3000);
+//     }, 500);
+//   });
+
+//   if (contact.classList.contains('email active')) {
+//     emailLink.addEventListener('click', copyEmail);
+//   }
+// });
+
+// const isMobile = window.matchMedia('(max-width: 59em)').matches;
+
+const copyText = 'andreadefilippi68@gmail.com';
+contacts.forEach((contact) => {
+  //   const cta = contact.querySelector('.cta');
+
+  //   // Su mobile: primo click attiva, secondo click apre/esegue
+  //   if (isMobile) {
+  //     contact.addEventListener('click', (e) => {
+  //       // Se il contact non è attivo → attivalo e blocca l'azione
+  //       if (!contact.classList.contains('active')) {
+  //         e.preventDefault();
+  //         e.stopPropagation();
+  //         contact.classList.add('active');
+
+  //         // Mostra la CTA
+  //         cta.classList.add('visible'); // (puoi gestire via CSS con .visible)
+  //         cta.addEventListener('click', copyEmail);
+
+  //         setTimeout(function () {
+  //           contact.classList.remove('active');
+  //           cta.classList.remove('visible');
+  //         }, 300);
+  //       }
+  //     });
+  //   } else {
+  if (contact.classList.contains('email')) {
+    contact.addEventListener('mouseenter', () => {
+      contact.classList.add('active');
+      // contact.querySelector('.cta').classList.add('active');
+    });
+
+    contact.querySelector('.cta').addEventListener('click', () => {
+      navigator.clipboard.writeText(copyText);
+
+      contact.querySelector('.cta').classList.add('active');
+      savedPopUp.classList.add('active');
+      setTimeout(function () {
+        contact.querySelector('.cta').classList.remove('active');
+        savedPopUp.classList.remove('active');
+      }, '1000');
+    });
+
+    contact.addEventListener('mouseleave', () => {
+      setTimeout(function () {
+        contact.classList.remove('active');
+      }, 500);
+    });
+  } else {
+    contact.addEventListener('mouseenter', () => {
+      contact.classList.add('active');
+      // contact.querySelector('.cta').classList.add('active');
+    });
+
+    // emailLink.addEventListener('click', copyEmail);
+
+    contact.addEventListener('mouseleave', () => {
+      contact.classList.remove('active');
+
+      // contact.querySelector('.cta').classList.remove('active');
+    });
+  }
+  // }
+});
 
 //////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////

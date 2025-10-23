@@ -31,9 +31,9 @@
 
 .contact {
     position: relative;
-    cursor: pointer;
     width: 16rem;
     padding: 1.2rem;
+    margin: 0.8rem;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -64,10 +64,13 @@
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     text-decoration: none;
+    font-size: var(--span);
     color: var(--prime-yellow);
     text-shadow: 0 0 3px var(--prime-yellow);
     display: inline-block;
     text-align: center;
+    cursor: pointer;
+    z-index: var(--foreground);
 
     visibility: hidden;
 
@@ -75,16 +78,27 @@
     transition: all .3s linear;
 }
 
-.contact .cta.active,
+/* .contact .cta.active,
 .email.active svg {
     filter: blur(13px);
-}
+} */
 
-.contact:hover .cta,
-.contact:focus .cta {
+/* .contact:hover .cta,
+.contact:focus .cta ,
+.contact.active .cta{
     transform: translate(-50%, -50%) scale(1);   
     visibility: visible;
     opacity: 1;
+} */
+
+.contact.active .cta {
+     transform: translate(-50%, -50%) scale(1);   
+    visibility: visible;
+    opacity: 1;
+}
+
+.cta.active {
+    filter: blur(13px);
 }
 
 .contact .saved {
@@ -120,6 +134,7 @@
     transition: all .3s ease;
 }
 
+.contact.active svg,
 .contact:hover svg,
 .contact:focus svg {
     transform: scale(0);

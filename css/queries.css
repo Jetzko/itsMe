@@ -115,6 +115,13 @@
 /*SKILLS*/
 /*CONTACTS*/
 
+  .contact .cta.visible {
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
 }
 /* Below 704px (Smaller Tablets) */
 /********************************************/
