@@ -112,8 +112,8 @@ Small:
     text-decoration: none;
     list-style: none;
     outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
-
 
 html{
     /*10px / 16px = 0.625 => 62.5%*/

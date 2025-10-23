@@ -43,8 +43,6 @@ sphere.addEventListener('mouseleave', function (e) {
     link.classList.remove('active');
     link.blur();
   });
-  //   sphere.style.background =
-  //     'radial-gradient(ellipse at bottom, #000000 0%, #1d0033 100%);';
 });
 
 links.forEach((link) => {
@@ -86,13 +84,12 @@ const sensitivity = 30;
 
 document.querySelector('.main-nav').addEventListener('touchstart', (e) => {
   startX = e.touches[0].clientX;
-  console.log(startX);
 });
 document.querySelector('.main-nav').addEventListener('touchend', (e) => {
   if (startX === null) return;
   const endX = e.changedTouches[0].clientX;
   const deltaX = endX - startX;
-  console.log(endX);
+
   if (deltaX < -sensitivity) {
     showLink((current + 1) % links.length);
   } else if (deltaX > sensitivity) {
@@ -100,3 +97,16 @@ document.querySelector('.main-nav').addEventListener('touchend', (e) => {
   }
   startX = null;
 });
+
+// const mediaQueryMobile = window.matchMedia('(max-width: 59em)');
+
+// if (mediaQueryMobile.matches) {
+//   sphere.addEventListener('click', () => {
+//     sphere.classList.add('active');
+//   });
+//   links.forEach((link) => {
+//     link.addEventListener('click', () => {
+//       sphere.classList.remove('active');
+//     });
+//   });
+// }

@@ -65,6 +65,19 @@
         font-size: 50%;
     }
 /*HERO*/
+
+/* .main-nav-link {
+    visibility: hidden;
+}
+
+.sphere.active .main-nav-link{
+    visibility: visible;
+    opacity: 1;
+    filter: blur(0);
+    pointer-events: auto;
+    text-shadow: 0 0 3px var(--light-violet);
+} */
+
 /*ABOUT*/
 
 .about .content {

@@ -80,6 +80,7 @@
     transition: opacity 0.4s, filter 0.4s;
 }
 
+/* .sphere.active .main-nav-link, */
 .sphere:hover .main-nav-link.active,
 .sphere:focus .main-nav-link.active,
 .main-nav:active,
