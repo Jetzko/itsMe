@@ -352,6 +352,7 @@
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+  z-index: var(--foreground);
 }
 
 .front-card{
@@ -383,7 +384,7 @@
 }
 
 /* .project:hover .project-card,  */
-.project.active .project-card,
+.project .project-card.active,
 .project:focus .project-card {
     transform: rotateY(180deg);
 }
@@ -420,19 +421,21 @@
     height: 100%;
     top: 0;
     left: 0;
+    transform-style: preserve-3d;
     transform: rotateY(180deg) !important;
     justify-content: space-between;
     padding: 2.4rem;
+    pointer-events: auto;
 }
 
-.project.active .front-card {
+/* .project.active .front-card {
     z-index: var(--background) !important;
 }
 .project.active .back-card {
     z-index: var(--foreground) !important;
-}
+} */
 
-.project.visible:hover .back-card,
+.project.visible .back-card,
 .project.visible:focus .back-card {
     opacity: 1;
     visibility: visible;
@@ -454,6 +457,7 @@
 .project-back-card-links {
     flex-direction: column;
     height: 40%;
+    pointer-events: auto;
 }
 
 .close {

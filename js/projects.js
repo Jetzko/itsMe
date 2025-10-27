@@ -1,5 +1,6 @@
 const projectFrontCards = document.querySelectorAll('.front-card');
 const projectBackCards = document.querySelectorAll('.back-card');
+const projectCards = document.querySelectorAll('.project-card');
 const projects = Array.from(document.querySelectorAll('.project'));
 const closeButtons = document.querySelectorAll('.close-btn');
 const arrowLeft = document.querySelector('.change-projects.left');
@@ -28,6 +29,7 @@ const openProject = function () {
 
 const closeProject = function () {
   this.closest('.project').classList.remove('active');
+  console.log('close project');
   setTimeout(hideCards, '500');
 };
 
@@ -51,13 +53,14 @@ if (window.matchMedia('(max-width: 34em)').matches) {
 
   projectFrontCards.forEach((card) => {
     card.addEventListener('click', () => {
-      openProject.call(card);
+      // openProject.call(card);
+      card.closest('.project-card').classList.add('active');
     });
   });
 
   projectBackCards.forEach((card) => {
     card.addEventListener('click', () => {
-      closeProject.call(card);
+      card.closest('.project-card').classList.remove('active');
       document.activeElement.blur();
     });
   });

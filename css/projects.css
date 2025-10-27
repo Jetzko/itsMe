@@ -123,14 +123,14 @@
 
 .project.mid.active .front-card{
     transform: scale(1.1) translate(-90%);
-    z-index: var(--foreground);
+  
     transition: scale 0.2s linear,  transform 0.2s ease-in;
     
 }
 
 .project.right.active .front-card{
     transform: scale(1.1) translateX(-180%);
-    z-index: var(--foreground);
+ 
     transition: scale 0.2s linear,  transform 0.2s ease-in;
     
 }
