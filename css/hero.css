@@ -110,6 +110,7 @@
 /* .sphere.active .main-nav-link, */
 .sphere:hover .main-nav-link.active,
 .sphere:focus .main-nav-link.active,
+
 .main-nav:active,
 .main-nav-link.active,
 .main-nav-link:focus{
@@ -117,6 +118,10 @@
   filter: blur(0);
   pointer-events: auto;
   text-shadow: 0 0 3px var(--light-violet);
+}
+
+.sphere.active .main-nav-link{
+    pointer-events: auto;
 }
 
 .scroll-down-icon {

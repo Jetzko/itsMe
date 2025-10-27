@@ -24,7 +24,6 @@ const showLink = function (index) {
 };
 
 sphere.addEventListener('mouseenter', function (e) {
-  e.preventDefault();
   showLink(current);
   sphere.addEventListener('wheel', (e) => {
     if (e.deltaY > 40) {
