@@ -58,6 +58,7 @@
      margin: 0.4rem;
      z-index: var(--foreground);
      visibility: hidden;
+     cursor: pointer;
 }
 
 .change-projects:hover,

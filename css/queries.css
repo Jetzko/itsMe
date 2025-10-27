@@ -382,7 +382,8 @@
   pointer-events: auto;
 }
 
-.project:hover .project-card, 
+/* .project:hover .project-card,  */
+.project.active .project-card,
 .project:focus .project-card {
     transform: rotateY(180deg);
 }
@@ -414,6 +415,7 @@
 .back-card {
     background-color: var(--dark-green);
     position: absolute;
+    cursor: pointer;
     width: 100%;
     height: 100%;
     top: 0;
@@ -421,6 +423,13 @@
     transform: rotateY(180deg) !important;
     justify-content: space-between;
     padding: 2.4rem;
+}
+
+.project.active .front-card {
+    z-index: var(--background) !important;
+}
+.project.active .back-card {
+    z-index: var(--foreground) !important;
 }
 
 .project.visible:hover .back-card,

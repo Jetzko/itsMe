@@ -1,4 +1,5 @@
 const projectFrontCards = document.querySelectorAll('.front-card');
+const projectBackCards = document.querySelectorAll('.back-card');
 const projects = Array.from(document.querySelectorAll('.project'));
 const closeButtons = document.querySelectorAll('.close-btn');
 const arrowLeft = document.querySelector('.change-projects.left');
@@ -48,6 +49,19 @@ if (window.matchMedia('(max-width: 34em)').matches) {
     updateVisibleProject(currentIndex);
   });
 
+  projectFrontCards.forEach((card) => {
+    card.addEventListener('click', () => {
+      openProject.call(card);
+    });
+  });
+
+  projectBackCards.forEach((card) => {
+    card.addEventListener('click', () => {
+      closeProject.call(card);
+      document.activeElement.blur();
+    });
+  });
+
   arrowRight.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % projects.length;
     updateVisibleProject(currentIndex);
@@ -78,8 +92,7 @@ if (window.matchMedia('(max-width: 34em)').matches) {
     button.addEventListener('click', closeProject.bind(button));
     button.addEventListener('keydown', (e) => {
       if (e.key === 'enter' || e.key === ' ') {
-        closeProject.call(button);
-        console.log(button);
+        closeProject.call(card);
       }
     });
   });

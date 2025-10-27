@@ -112,7 +112,6 @@
 .sphere:focus .main-nav-link.active,
 .main-nav:active,
 .main-nav-link.active,
-.main-nav-link:hover,
 .main-nav-link:focus{
   opacity: 1;
   filter: blur(0);
