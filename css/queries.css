@@ -337,6 +337,10 @@
 }
 
 /*PROJECTS*/
+.projects .section-title{
+    align-self: center;
+}
+
 .project-container{
     grid-row: 2/4;
     display: flex;
@@ -390,6 +394,7 @@
 
 .project-title {
     transform: none;
+    align-self: center;
 }
 
 .project-text {
@@ -564,9 +569,13 @@
      transform: translate(-50%, -50%) scale(0.8);  
 }
 
+.labels{
+    height: 8rem;
+}
+
 .orb {
-    width: 3.2rem;
-    height: 3.2rem;
+    width: 4.8rem;
+    height: 4.8rem;
 }
 
 }
