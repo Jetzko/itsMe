@@ -392,6 +392,10 @@
     transform: none;
 }
 
+.project-text {
+    font-size: var(--paragraph);
+}
+
 .front-card img {
     transform: translateY(10%);
 }
@@ -471,7 +475,7 @@
     height: 100%;
     text-wrap: balance;
     text-align: left;
-    font-size: var(--span);
+    
 }
 
 .project-back-card-links {

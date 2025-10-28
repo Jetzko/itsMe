@@ -35,6 +35,7 @@ const closeProject = function () {
 
 const updateVisibleProject = function (index) {
   projects.forEach((project, i) => {
+    project.querySelector('.project-card').classList.remove('active');
     project.classList.remove('visible');
     if (i === index) {
       project.classList.add('visible');
