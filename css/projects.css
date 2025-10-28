@@ -247,6 +247,7 @@
     visibility: visible;
     transform: translateX(-50%);
     opacity: 1;
+    z-index: var(--midground);
 }
 
 .project-text {

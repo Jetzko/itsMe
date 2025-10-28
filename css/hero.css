@@ -105,6 +105,7 @@
   filter: blur(1rem);
   pointer-events: none;
   transition: opacity 0.5s ease, filter 0.5s ease;
+  z-index: var(--background);
 }
 
 /* .sphere.active .main-nav-link, */
@@ -118,6 +119,7 @@
   filter: blur(0);
   pointer-events: auto;
   text-shadow: 0 0 3px var(--light-violet);
+  z-index: var(--foreground);
 }
 
 .sphere.active .main-nav-link{
@@ -139,4 +141,8 @@
 .sphere:hover .scroll-down-icon,
 .scroll-down-icon.active {
     opacity: 0.8;
+}
+
+.swipe-icon {
+    display: none;
 }

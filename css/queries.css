@@ -303,7 +303,27 @@
     height: 32rem;
     width: 32rem;
 }
+.scroll-down-icon {
+    display: none;
+}
 
+.swipe-icon {
+    display: block;
+    position: absolute;
+    width: 8%;
+    height: 8%;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.2s ease-in;
+    opacity: 0;
+    filter: drop-shadow(0 0 1px var(--light-violet));
+}
+
+.sphere:hover .swipe-icon,
+.swipe-icon.active {
+    opacity: 0.8;
+}
 
 /*ABOUT*/
 
