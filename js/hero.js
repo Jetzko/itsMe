@@ -23,7 +23,6 @@ const showLink = function (index) {
   links[index].focus();
   // links[index].scrollIntoView({ behavior: 'smooth', block: 'center' });
   current = index;
-  console.log('>>> Current link set to:', links[index].getAttribute('href'));
 };
 
 let wheelListenerActive = false;
@@ -32,7 +31,6 @@ const handleWheel = (e) => {
   // Add a check to only run if the mouse is currently "entered" or an active state
   if (!wheelListenerActive) return;
 
-  console.log('>>> Wheel event deltaY:', e.deltaY);
   if (e.deltaY > 40) {
     showLink((current + 1) % links.length);
   } else if (e.deltaY < -40) {
@@ -75,12 +73,6 @@ links.forEach((link) => {
     console.log('>>> Clicked link with href:', targetHref);
     const targetElement = document.querySelector(targetHref);
     if (targetElement) {
-      console.log(
-        '>>> Scrolling to element:',
-        targetElement.id,
-        'with tag:',
-        targetElement.tagName
-      );
       targetElement.scrollIntoView({ behavior: 'smooth' });
     } else {
       console.error('>>> Target element not found for href:', targetHref);

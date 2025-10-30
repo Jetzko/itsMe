@@ -17,3 +17,13 @@ orbs.forEach((orb) => {
     orb.classList.remove('active');
   });
 });
+
+orbs.forEach((orb) => {
+  const orbAnchor = orb.querySelector('.orb-anchor');
+  orbAnchor.addEventListener('click', () => {
+    setTimeout(function () {
+      orbAnchor.classList.remove('active');
+      orbAnchor.blur();
+    }, 200);
+  });
+});

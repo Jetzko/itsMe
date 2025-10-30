@@ -57,7 +57,7 @@
      justify-content: center;
      margin: 0.4rem;
      z-index: var(--foreground);
-     visibility: hidden;
+     visibility: visible;
      cursor: pointer;
 }
 
@@ -155,7 +155,7 @@
     opacity: 1;
 }
 
-.project img {
+.project-img {
     z-index: var(--midground);
     position: relative;
     width: 300%;

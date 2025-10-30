@@ -188,16 +188,16 @@
    height: 1000%;  
 }
 
-#myPage {
+.project-img:nth-child(0) {
     transform: skewY(var(--inclinationY)) translate(10%, -12%);
 }
 
- #forkify {
+ .project-img:nth-child(1) {
     transform: skewY(var(--inclinationY)) translate(5%, -10%) scale(1.1);
     width: 200%;
 }
 
-#omnifood {
+.project-img:nth-child(2) {
     transform: skewY(var(--inclinationY)) translate(10%, -10%) scale(1.1);
     width: 200%;
 } 
@@ -576,6 +576,16 @@
 .orb {
     width: 4.8rem;
     height: 4.8rem;
+}
+
+.orb:active {
+    opacity: 1;
+    box-shadow: 0 0 10px 10px var(--prime-violet);
+}
+
+.orb:visited {
+    opacity: 0.6;
+    box-shadow: 0 0 2px 2px var(--prime-violet);
 }
 
 }
