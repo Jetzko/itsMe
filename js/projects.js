@@ -3,25 +3,6 @@ const arrowLeft = document.querySelector('.change-projects.left');
 const arrowRight = document.querySelector('.change-projects.right');
 const projectContainer = document.querySelector('.project-container');
 
-//==========================================//
-//==========================================//
-//  Devo creare una funzione che aggiorni il contenuto delle project cards.
-//  Posso creare un array di oggetti da utilizzare come database per le mie cards.
-//  Come proprietà degli oggetti mi servono: project-title, project-img, project-subtitle, project-description, live-link, git-link.
-//  PROBLEMA: i progetti sono organizzati in sottogruppi da tre perché nel layout le animazioni sono organizzate per progetti a destra, centro e sinistra
-//  -Posso organizzare l'array in sottogruppi di tre oggetti composti da altri array
-//  -La funzione deve aggiornare i contenuti delle project-cards utilizzando i dati degli oggetti nell'array
-//  -Ogni qual volta l'utente clicca su una freccia ai lati i contenuti si deve passare da un elemento (sub-array di 3 oggetti) ad un altro
-//  -Quando si arriva all'ultimo elemento dell'array bisogna tornare al primo
-//  -Posso lasciare nel file html la struttura left-mid-right, cosicché gli elementi siano già presenti alla creazione della pagina, ma vuoti di contenuti
-//  -Agirò sul contenuto html dei singoli progetti.
-//  PROBLEMA 1: dati 3 progetti vuoti, come fare affinché inizialmente projects[0] = projectsData[0], projects[1] = projectsData[1], projects[2] = projectsData[2]?
-//  PROBLEMA 2: al cliccare delle frecce laterali, come fare affinché projects[0] = projectsData[1], projects[1] = projectsData[2], projects[2] = projectsData[0]?
-//  SOLUZIONI:
-//  1 -Dichiarare in una variabile i projects
-//  2- Assegnare all'innerHtml dei projects i valori dei primi 3 dataObj di projectsData
-//  2- Modificare l'index di projectsData attraverso le frecce laterali
-
 // Card Compiler
 
 let currentIndex = 0;
@@ -49,6 +30,7 @@ const projectsData = [
     liveLink: 'https://antrodiandrea.netlify.app/',
     gitLink: 'https://github.com/Jetzko/itsMe',
   },
+
   {
     projectTitle: 'Forkify',
     projectImg: 'src/webp/forkify.webp',
@@ -64,6 +46,7 @@ const projectsData = [
     liveLink: 'https://djetzko-forkify.netlify.app/',
     gitLink: 'https://github.com/Jetzko/forkify',
   },
+
   {
     projectTitle: 'Omnifood',
     projectImg: 'src/webp/omnifood.webp',
@@ -333,10 +316,10 @@ compileCards();
 // Cards's Functionalities
 //==========================================//
 
-const projectFrontCards = document.querySelectorAll('.front-card');
-const projectBackCards = document.querySelectorAll('.back-card');
-const projectCards = document.querySelectorAll('.project-card');
-const closeButtons = document.querySelectorAll('.close-btn');
+// const projectFrontCards = document.querySelectorAll('.front-card');
+// const projectBackCards = document.querySelectorAll('.back-card');
+// const projectCards = document.querySelectorAll('.project-card');
+// const closeButtons = document.querySelectorAll('.close-btn');
 
 let inactives;
 
@@ -363,10 +346,11 @@ const closeProject = function () {
 };
 
 const updateVisibleProject = function (index) {
+  const slotIndex = index % projects.length;
   projects.forEach((project, i) => {
     project.querySelector('.project-card').classList.remove('active');
     project.classList.remove('visible');
-    if (i === index) {
+    if (i === slotIndex) {
       project.classList.add('visible');
       project.focus();
     }
@@ -376,28 +360,48 @@ const updateVisibleProject = function (index) {
 if (window.matchMedia('(max-width: 34em)').matches) {
   updateVisibleProject(currentIndex);
 
-  arrowRight.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % projects.length;
-    updateVisibleProject(currentIndex);
-  });
-
   arrowLeft.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + projects.length) % projects.length;
+    currentIndex =
+      (currentIndex - 1 + projectsData.length) % projectsData.length;
+    compileCards();
     updateVisibleProject(currentIndex);
   });
 
-  projectFrontCards.forEach((card) => {
-    card.addEventListener('click', () => {
-      card.closest('.project-card').classList.add('active');
-    });
+  arrowRight.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % projectsData.length;
+    compileCards();
+    updateVisibleProject(currentIndex);
   });
 
-  projectBackCards.forEach((card) => {
-    card.addEventListener('click', () => {
-      card.closest('.project-card').classList.remove('active');
+  // 👇 Event delegation
+  projectContainer.addEventListener('click', (e) => {
+    const front = e.target.closest('.front-card');
+    const back = e.target.closest('.back-card');
+
+    // se clicco sul fronte, la card si apre
+    if (front) {
+      front.closest('.project-card').classList.add('active');
+    }
+
+    // se clicco sul retro, la card si chiude
+    if (back) {
+      back.closest('.project-card').classList.remove('active');
       document.activeElement.blur();
-    });
+    }
   });
+
+  // projectFrontCards.forEach((card) => {
+  //   card.addEventListener('click', () => {
+  //     card.closest('.project-card').classList.add('active');
+  //   });
+  // });
+
+  // projectBackCards.forEach((card) => {
+  //   card.addEventListener('click', () => {
+  //     card.closest('.project-card').classList.remove('active');
+  //     document.activeElement.blur();
+  //   });
+  // });
 } else {
   arrowLeft.addEventListener('click', () => {
     currentIndex =
@@ -452,34 +456,4 @@ if (window.matchMedia('(max-width: 34em)').matches) {
       closeProject.call(closeBtn);
     }
   });
-
-  // projectFrontCards.forEach((card) => {
-  //   card.addEventListener('click', () => {
-  //     if (card.closest('.project').classList.contains('active')) {
-  //       closeProject.call(card);
-  //       document.activeElement.blur();
-  //     } else {
-  //       openProject.call(card);
-  //     }
-  //   });
-  //   card.addEventListener('keydown', (e) => {
-  //     if (e.key === 'Enter' || e.key === ' ') {
-  //       if (card.closest('.project').classList.contains('active')) {
-  //         closeProject.call(card);
-  //         document.activeElement.blur();
-  //       } else {
-  //         openProject.call(card);
-  //       }
-  //     }
-  //   });
-  // });
-
-  // closeButtons.forEach((button) => {
-  //   button.addEventListener('click', closeProject.bind(button));
-  //   button.addEventListener('keydown', (e) => {
-  //     if (e.key === 'enter' || e.key === ' ') {
-  //       closeProject.call(card);
-  //     }
-  //   });
-  // });
 }
