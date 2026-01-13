@@ -357,8 +357,10 @@ const closeProject = function () {
   setTimeout(hideCards, '500');
 };
 
-const updateVisibleProject = function (index) {
-  const slotIndex = index % projects.length;
+const updateVisibleProject = function (index, forcedSlotIndex) {
+  const slotIndex =
+    forcedSlotIndex !== undefined ? forcedSlotIndex : index % projects.length;
+
   projects.forEach((project, i) => {
     project.querySelector('.project-card').classList.remove('active');
     project.classList.remove('visible');
@@ -370,19 +372,19 @@ const updateVisibleProject = function (index) {
 };
 
 if (window.matchMedia('(max-width: 34em)').matches) {
-  updateVisibleProject(currentIndex);
+  updateVisibleProject(currentIndex, 0);
 
   arrowLeft.addEventListener('click', () => {
     currentIndex =
       (currentIndex - 1 + projectsData.length) % projectsData.length;
     compileCards();
-    updateVisibleProject(currentIndex);
+    updateVisibleProject(currentIndex, 0);
   });
 
   arrowRight.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % projectsData.length;
     compileCards();
-    updateVisibleProject(currentIndex);
+    updateVisibleProject(currentIndex, 0);
   });
 
   // 👇 Event delegation
