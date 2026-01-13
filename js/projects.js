@@ -15,7 +15,19 @@ const projectsData = [
   //   liveLink,
   //   gitLink,
   // },
-
+  {
+    projectTitle: 'DraftPick',
+    projectImg: 'src/webp/omnifood.webp',
+    projectSubtitle: 'Studio di Api e architettura MVC',
+    projectDescription: `Un tool per aiutare i giocatori di League of Legends nella comprensione del gioco, 
+                    nella sua componente di squadra.<br />
+                    L'obiettivo di questo progetto è stato quello di lavorare con una <em>API pubblica</em>, 
+                    le fuzioni <em>asincrone</em>, di imparare di più sull'architettura <em>MVC</em>,  
+                    di come funziona il flusso di dati, approfondire l'utilizzo delle <em>classi</em> e 
+                    la programmazione ad oggetti.`,
+    liveLink: 'https://draftpick.netlify.app/',
+    gitLink: 'https://github.com/Jetzko/DraftPick',
+  },
   {
     projectTitle: "It's me!",
     projectImg: 'src/webp/myPage.webp',
