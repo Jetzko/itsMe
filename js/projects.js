@@ -17,7 +17,7 @@ const projectsData = [
   // },
   {
     projectTitle: 'DraftPick',
-    projectImg: 'src/webp/omnifood.webp',
+    projectImg: 'src/webp/draftPick.webp',
     projectSubtitle: 'Studio di Api e architettura MVC',
     projectDescription: `Un tool per aiutare i giocatori di League of Legends nella comprensione del gioco, 
                     nella sua componente di squadra.<br />
