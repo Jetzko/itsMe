@@ -16,6 +16,19 @@ const projectsData = [
   //   gitLink,
   // },
   {
+    projectTitle: 'Natours',
+    projectImg: 'src/webp/Natours_Home.webp',
+    projectSubtitle: 'Progetto studio Node.js',
+    projectDescription: `Progetto di fine corso "Node.js, Express, MongoDB & More: The Complete Bootcamp"
+     di Jonas Schmedtmann, seguito sulla piattaforma di apprendimento Udemy. <br />
+     In questo progetto ho messo in pratica varie tecnologie backend come 
+     <em>Node.js</em>, <em>express</em>, <em>mongoose</em>, <em>mongoDB</em>.
+     Inoltre ho lavorato con diverse <em>API</em> esterne e tool terzi come 
+     <em>postman</em>, <em>compass</em>, <em>stripe</em> e <em>brevo</em>.`,
+    liveLink: 'https://natours-d5pl.onrender.com/',
+    gitLink: 'https://github.com/Jetzko/natours',
+  },
+  {
     projectTitle: 'DraftPick',
     projectImg: 'src/webp/draftPick.webp',
     projectSubtitle: 'Studio di Api e architettura MVC',
@@ -337,7 +350,7 @@ let inactives;
 
 const showCards = function () {
   inactives = projects.filter(
-    (project) => !project.classList.contains('active')
+    (project) => !project.classList.contains('active'),
   );
   inactives.forEach((inactive) => inactive.classList.add('inactive'));
 };
