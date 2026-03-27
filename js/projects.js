@@ -45,7 +45,7 @@ const projectsData = [
     projectTitle: "It's me!",
     projectImg: 'src/webp/myPage.webp',
     projectSubtitle: 'Il mio primo progetto indie',
-    projectDescription: `Il sito dove mi presento al mondo, espongo il mio porfolio e offro i miei contatti.<br />
+    projectDescription: `Il sito dove mi presento al mondo, espongo il mio portfolio e offro i miei contatti.<br />
                     Mi sono posto come obiettivi l'<em>immediatezza</em> delle
                     informazioni, l'<em>esperienza</em> dell'interazione e
                     l'espressione della mia <em>creatività</em>.<br />
