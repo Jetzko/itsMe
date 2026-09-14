@@ -30,7 +30,7 @@ const projectsData = [
     projectSubtitle: 'Progetto studio React',
     projectDescription:
       'Progetto intermedio del corso "The Ultimate React Course 2025: React, Next.js, Redux & More" di Jonas Schmedtmann, seguito sulla piattaforma di apprendimento Udemy. <br /> In questo progetto ho messo in pratica tutte le strutture, sintassi e gli hook principali di React, oltre ad aver lavorato con <em>Supabase</em> per il backend e <em>Netlify</em> per il deploy.',
-    liveLink: 'https://the-wild-oasis-djetzko-learn.netlify.app/login',
+    liveLink: 'https://the-wild-oasis-djetzko-learn.netlify.app',
     gitLink: 'https://github.com/Jetzko/theWildOasis-learn',
   },
   {
