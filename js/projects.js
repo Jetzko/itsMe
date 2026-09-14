@@ -44,7 +44,7 @@ const projectsData = [
   },
   {
     projectTitle: 'React Menu',
-    projectImg: 'src/webp/react-menu-webp',
+    projectImg: 'src/webp/react-menu.webp',
     projectSubtitle: 'Prima React App',
     projectDescription:
       "L'interfaccia di un menù di una gelateria creata con React. Ho usato questo progetto per sperimentate con gli state e la sintassi di React.",
