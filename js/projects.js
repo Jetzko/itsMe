@@ -16,6 +16,41 @@ const projectsData = [
   //   gitLink,
   // },
   {
+    projectTitle: 'The Wild Oasis / Client',
+    projectImg: 'src/webp/the-wild-oasis-client.webp',
+    projectSubtitle: 'Progetto studio Next.js',
+    projectDescription: 'Progetto finale del corso "The Ultimate React Course 2025: React, Next.js, Redux & More" di Jonas Schmedtmann, seguito sulla piattaforma di apprendimento Udemy. <br /> In questo progetto ho lavorato con <em>Next.js</em>, <em>Tailwind</em> e <em>Vercel</em> per il deploy.',
+    liveLink: 'https://the-wild-oasis-nextjs-v1-theta.vercel.app/',
+    gitLink: 'https://github.com/Jetzko/TheWildOasis-nextjs-v1',
+  },
+  {
+    projectTitle: 'The Wild Oasis / Host',
+    projectImg: 'src/webp/the-wild-oasis-host.webp',
+    projectSubtitle: 'Progetto studio React',
+    projectDescription: 'Progetto intermedio del corso "The Ultimate React Course 2025: React, Next.js, Redux & More" di Jonas Schmedtmann, seguito sulla piattaforma di apprendimento Udemy. <br /> In questo progetto ho messo in pratica tutte le strutture, sintassi e gli hook principali di React, oltre ad aver lavorato con <em>Supabase</em> per il backend e <em>Netlify</em> per il deploy.
+',
+    liveLink: 'https://the-wild-oasis-djetzko-learn.netlify.app/login',
+    gitLink: 'https://github.com/Jetzko/theWildOasis-learn',
+  },
+  {
+    projectTitle: 'Weather App',
+    projectImg: 'src/webp/weather-app.webp',
+    projectSubtitle: 'Una semplice app meteo',
+    projectDescription:
+      'Una semplice app per il meteo. Si può scegliere la località, e il giorno della settimana corrente. Vengono indicate informazioni dettagliate sul meteo del giorno corrente e generali della settimana.',
+    liveLink: 'https://weatherapp-djetzko.netlify.app/',
+    gitLink: 'https://github.com/Jetzko/WeatherApp',
+  },
+  {
+    projectTitle: 'React Menu',
+    projectImg: 'src/webp/react-menu-webp',
+    projectSubtitle: 'Prima React App',
+    projectDescription:
+      "L'interfaccia di un menù di una gelateria creata con React. Ho usato questo progetto per sperimentate con gli state e la sintassi di React.",
+    liveLink: 'https://reactmenu-djetzko.netlify.app/',
+    gitLink: 'https://github.com/Jetzko/ReactMenu',
+  },
+  {
     projectTitle: 'Natours',
     projectImg: 'src/webp/Natours_Home.webp',
     projectSubtitle: 'Progetto studio Node.js',
